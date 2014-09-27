@@ -2,18 +2,27 @@
 <html lang="zh-Hans">
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=none">
         <title>Simple Blog</title>
         <link rel="stylesheet" type="text/css" href="./css/main.css">
     </head>
     <body>
         <header class="clearfix">
-            <nav class="top-nav row clearfix">
+            <nav class="mini-nav clearfix">
+                <ul>
+                    <li class="home"><a href="#">首页</a></li>
+                    <li class="search"><a href="#">搜索</a></li>
+                    <li class="category drop"><a href="#">分类</a></li>
+                    <li class="tag drop"><a href="#">标签</a></li>
+                    <li class="about"><a href="#">关于</a></li>
+                </ul> 
+            </nav>
+            <nav class="main-nav row clearfix">
                 <ul>
                     <li class="home"><a href="#">首页</a></li>
                     <li class="tag drop">
                         <a href="#">标签</a>
-                        <ul class="drop-menu">
+                        <ul class="drop-menu clearfix">
                             <li><a href="#">TAG</a></li>
                             <li><a href="#">TAG</a></li>
                             <li><a href="#">TAG</a></li>
@@ -26,11 +35,16 @@
                             <li><a href="#">CSS</a></li>
                             <li><a href="#">TAG</a></li>
                             <li><a href="#">TAG</a></li>
+                            <li><a href="#">TAG</a></li>
+                            <li><a href="#">TAG</a></li>
+                            <li><a href="#">TAG</a></li>
+                            <li><a href="#">TAG</a></li>
+                            <li><a href="#">TAG</a></li>
                         </ul>
                     </li>
                     <li class="category drop">
                         <a href="#">分类</a>
-                        <ul class="drop-menu">
+                        <ul class="drop-menu clearfix">
                             <li><a href="#">日常</a></li>
                             <li><a href="#">编程</a></li>
                             <li><a href="#">ACG</a></li>
@@ -38,7 +52,7 @@
                         </ul>
                     </li>
                     <li class="about"><a href="#">关于</a></li>
-                    <li class="search"><a href="#">搜索</a><input type="search" placeholder="搜索"></li>
+                    <li class="search"><input type="search" placeholder="搜索"></li>
                 </ul>
             </nav>
             <div class="avatar">
