@@ -177,19 +177,16 @@ header {
 header .row {
   padding: 0;
 }
-header .mini-nav > ul > li {
+header .mini-nav li {
   float: right;
   border-left: 1px solid #e6eaed;
 }
-header .mini-nav > ul > li:first-child {
+header .mini-nav li:first-child {
   float: left;
   border-left: none;
   border-right: 1px solid #e6eaed;
 }
-header .mini-nav > ul > li.search input {
-  display: none;
-}
-header .mini-nav > ul > li > a {
+header .mini-nav li a {
   display: block;
   height: 50px;
   width: 50px;
@@ -197,21 +194,21 @@ header .mini-nav > ul > li > a {
   text-indent: -9999px;
 }
 @media screen and (-webkit-device-pixel-ratio: 2) {
-  header .mini-nav > ul > li > a {
+  header .mini-nav li a {
     background-image: url("../images/mini-icons@2x.png");
     background-size: 250px 50px;
   }
 }
-header .mini-nav > ul > li.tag > a {
+header .mini-nav .tag a {
   background-position: -50px 0;
 }
-header .mini-nav > ul > li.category > a {
+header .mini-nav .category a {
   background-position: -100px 0;
 }
-header .mini-nav > ul > li.about > a {
+header .mini-nav .about a {
   background-position: -150px 0;
 }
-header .mini-nav > ul > li.search > a {
+header .mini-nav .search a {
   background-position: -200px 0;
 }
 header .main-nav {
