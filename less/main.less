@@ -1,0 +1,149 @@
+/* less define */
+@main-green: #4AB3A5;
+@text-dark: #272727;
+@text-lighter: #8e8e8e;
+@text-lightest: #b7b7b7;
+@nav-gray: #bcbcbc;
+@background-white: #fefefe;
+
+@img: "../images/";
+
+.font-size(@size) {
+    font-size: unit(@size, px);
+    font-size: unit(@size/10, rem);
+}
+
+/**
+ * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
+ * http://cssreset.com
+ */
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+
+    &::before, &::after {
+        content: '';
+        content: none;
+    }
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* overall */
+.clearfix {
+    zoom: 1;
+
+    &::after {
+        content: ".";
+        height: 0;
+        width: 0;
+        visibility: hidden;
+        clear: both;
+        font-size: 0;
+        display: block;
+    }
+}
+
+.row {
+    min-width: 300px;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* header */
+header {
+    @header-border: 1px solid #e6eaed;
+
+    border-bottom: @header-border;
+
+    nav {
+
+        .drop-menu {
+            display: none;
+        }
+
+        & > ul > li {
+            float: right;
+            border-left: @header-border;
+
+            &:first-child {
+                float: left;
+                border-left: none;
+                border-right: @header-border;
+            }
+
+            &.search input {
+                display: none;
+            }
+
+            & > a {
+                display: block;
+                height: 60px;
+                width: 60px;
+                background: url("@{img}mini-icons.png") no-repeat transparent;
+                text-indent: -9999px;
+            }
+
+            &.tag > a {
+                background-position: -60px 0;
+            }
+
+            &.category > a {
+                background-position: -120px 0;
+            }
+
+            &.about > a {
+                background-position: -180px 0;
+            }
+
+            &.search > a {
+                background-position: -240px 0;
+            }
+        }
+    }
+
+    .avatar {
+        display: none;
+    }
+}
