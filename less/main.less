@@ -8,6 +8,9 @@
 
 @img: "../images/";
 
+@gte540: ~"screen and (min-width: 540px)";
+@p2x: ~"screen and (-webkit-device-pixel-ratio: 2)";
+
 .font-size(@size) {
     font-size: unit(@size, px);
     font-size: unit(@size/10, rem);
@@ -79,6 +82,10 @@ table {
     margin: 0 auto;
     padding-left: 15px;
     padding-right: 15px;
+
+    @media @gte540 {
+        max-width: 680px;
+    }
 }
 
 html {
@@ -122,7 +129,20 @@ header {
         padding: 0;
     }
 
+    @media @gte540 {
+        .image {
+            height: 300px;
+            background: url("@{img}header-img.jpg") no-repeat transparent;
+            background-size: 100% auto;
+            background-position: 0 100%;
+            position: relative;
+        }
+    }
+
     .mini-nav {
+        @media @gte540 {
+            display: none;
+        }
        
         li {
             float: right;
@@ -141,7 +161,7 @@ header {
                 background: url("@{img}mini-icons.png") no-repeat transparent;
                 text-indent: -9999px;
 
-                @media screen and (-webkit-device-pixel-ratio: 2) {
+                @media @p2x {
                     background-image: url("@{img}mini-icons@2x.png");
                     background-size: 250px 50px;
                 }
@@ -169,9 +189,47 @@ header {
         width: 100%;
         float: left;
 
+        @media @gte540 {
+            float: none;
+            height: 60px;
+        }
+
+        li {
+            @media @gte540 {
+                float: left;
+                position: relative;
+                padding-right: 20px;
+                padding-left: 10px;
+
+                &.drop {
+                    padding-right: 30px;
+
+                    & > a::after {
+                        content: "";
+                        height: 0;
+                        width: 0;
+                        border-style: solid;
+                        border-color: @text-lighter transparent transparent transparent;
+                        border-width: 8px;
+                        position: absolute;
+                        top: 50%;
+                        margin-top: -4px;
+                        right: 10px;
+                    }
+                }
+            }
+        }
+
+
         & > ul > li > a {
             display: none;
-         }
+
+            @media @gte540 {
+                display: inline;
+                .font-size(16);
+                line-height: 60px;
+            }
+        }
 
         .drop-menu {
             border-top: @header-border; 
@@ -186,11 +244,24 @@ header {
             li a {
                 .font-size(14);
             }
+
+            @media @gte540 {
+                position: absolute;
+                display: none;
+            }
         }
 
         .search {
             border-top: @header-border; 
             height: 35px;
+
+            @media @gte540 {
+                float: right;
+                border: none;
+                margin-top: 14px;
+                padding: 0;
+                padding-right: 8px;
+            }
 
             input {
                 -webkit-appearance: none;
@@ -207,16 +278,58 @@ header {
                         color: transparent;
                     } 
                 }
+
+                @media @gte540 {
+                    border: 1px solid @text-lighter;
+                    border-radius: 10px;
+                    display: inline-block;
+                    margin: 0;
+                    height: 30px;
+
+                    &:focus {
+                        border: 1px solid @text-lighter;
+                    }
+                }
             }
         }
 
         .tag, .category, .search {
             display: none;
+
+            @media @gte540 {
+                display: block;
+            }
         }
     }
 
-    .avatar  {
+    .avatar-container {
         display: none;
+
+        @media @gte540 {
+            display: block;
+            position: absolute;
+            width: 160px;
+            height: 160px;
+            background: #fff;
+            border-radius: 50%;
+            z-index: 10;
+            top: 50%;
+            left: 50%;
+            margin-left: -80px;
+            margin-top: -80px;
+
+            .avatar-image {
+                background: url("@{img}avatar.jpg") no-repeat transparent;
+                width: 150px;
+                height: 150px;
+                border-radius: 50%;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                margin-left: -75px;
+                margin-top: -75px;
+            }
+        }
     }
 }
 
@@ -232,6 +345,7 @@ header {
             text-align: center;
             color: @text-lighter;
             padding: 0 5px;
+            font-weight: bold;
         }
 
         article {

@@ -146,6 +146,11 @@ table {
   padding-left: 15px;
   padding-right: 15px;
 }
+@media screen and (min-width: 540px) {
+  .row {
+    max-width: 680px;
+  }
+}
 html {
   font-size: 62.5%;
   -webkit-font-smoothing: antialiased;
@@ -176,6 +181,20 @@ header {
 }
 header .row {
   padding: 0;
+}
+@media screen and (min-width: 540px) {
+  header .image {
+    height: 300px;
+    background: url("../images/header-img.jpg") no-repeat transparent;
+    background-size: 100% auto;
+    background-position: 0 100%;
+    position: relative;
+  }
+}
+@media screen and (min-width: 540px) {
+  header .mini-nav {
+    display: none;
+  }
 }
 header .mini-nav li {
   float: right;
@@ -215,8 +234,45 @@ header .main-nav {
   width: 100%;
   float: left;
 }
+@media screen and (min-width: 540px) {
+  header .main-nav {
+    float: none;
+    height: 60px;
+  }
+}
+@media screen and (min-width: 540px) {
+  header .main-nav li {
+    float: left;
+    position: relative;
+    padding-right: 20px;
+    padding-left: 10px;
+  }
+  header .main-nav li.drop {
+    padding-right: 30px;
+  }
+  header .main-nav li.drop > a::after {
+    content: "";
+    height: 0;
+    width: 0;
+    border-style: solid;
+    border-color: #8e8e8e transparent transparent transparent;
+    border-width: 8px;
+    position: absolute;
+    top: 50%;
+    margin-top: -4px;
+    right: 10px;
+  }
+}
 header .main-nav > ul > li > a {
   display: none;
+}
+@media screen and (min-width: 540px) {
+  header .main-nav > ul > li > a {
+    display: inline;
+    font-size: 16px;
+    font-size: 1.6rem;
+    line-height: 60px;
+  }
 }
 header .main-nav .drop-menu {
   border-top: 1px solid #e6eaed;
@@ -231,9 +287,24 @@ header .main-nav .drop-menu li a {
   font-size: 14px;
   font-size: 1.4rem;
 }
+@media screen and (min-width: 540px) {
+  header .main-nav .drop-menu {
+    position: absolute;
+    display: none;
+  }
+}
 header .main-nav .search {
   border-top: 1px solid #e6eaed;
   height: 35px;
+}
+@media screen and (min-width: 540px) {
+  header .main-nav .search {
+    float: right;
+    border: none;
+    margin-top: 14px;
+    padding: 0;
+    padding-right: 8px;
+  }
 }
 header .main-nav .search input {
   -webkit-appearance: none;
@@ -250,13 +321,58 @@ header .main-nav .search input:focus {
 header .main-nav .search input:focus::-webkit-input-placeholder {
   color: transparent;
 }
+@media screen and (min-width: 540px) {
+  header .main-nav .search input {
+    border: 1px solid #8e8e8e;
+    border-radius: 10px;
+    display: inline-block;
+    margin: 0;
+    height: 30px;
+  }
+  header .main-nav .search input:focus {
+    border: 1px solid #8e8e8e;
+  }
+}
 header .main-nav .tag,
 header .main-nav .category,
 header .main-nav .search {
   display: none;
 }
-header .avatar {
+@media screen and (min-width: 540px) {
+  header .main-nav .tag,
+  header .main-nav .category,
+  header .main-nav .search {
+    display: block;
+  }
+}
+header .avatar-container {
   display: none;
+}
+@media screen and (min-width: 540px) {
+  header .avatar-container {
+    display: block;
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    background: #fff;
+    border-radius: 50%;
+    z-index: 10;
+    top: 50%;
+    left: 50%;
+    margin-left: -80px;
+    margin-top: -80px;
+  }
+  header .avatar-container .avatar-image {
+    background: url("../images/avatar.jpg") no-repeat transparent;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -75px;
+    margin-top: -75px;
+  }
 }
 /* conatiner */
 .container {
@@ -274,6 +390,7 @@ header .avatar {
   text-align: center;
   color: #8e8e8e;
   padding: 0 5px;
+  font-weight: bold;
 }
 .container.home article {
   margin: 40px 0 20px 0;
