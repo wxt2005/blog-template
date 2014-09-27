@@ -141,10 +141,10 @@ table {
   display: block;
 }
 .row {
-  min-width: 300px;
+  min-width: 270px;
   margin: 0 auto;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 html {
   font-size: 62.5%;
@@ -261,6 +261,95 @@ header .main-nav .search {
 header .avatar {
   display: none;
 }
+/* conatiner */
 .container {
-  margin-top: 50px;
+  /* for home page */
+
+  /* for load button */
+
+}
+.container.home {
+  margin-top: 20px;
+}
+.container.home h1 {
+  font-size: 36px;
+  font-size: 3.6rem;
+  text-align: center;
+  color: #8e8e8e;
+  padding: 0 5px;
+}
+.container.home article {
+  margin: 40px 0 20px 0;
+  border-bottom: 1px dashed #b7b7b7;
+}
+.container.home article .info {
+  border-bottom: 1px solid #b7b7b7;
+  padding: 0 2px 5px 2px;
+  color: #b7b7b7;
+  font-size: 14px;
+  font-size: 1.4rem;
+}
+.container.home article .info div {
+  float: left;
+}
+.container.home article .info .categories,
+.container.home article .info .tags {
+  display: none;
+}
+.container.home article .info .comments {
+  float: right;
+}
+.container.home article h2 {
+  color: #000;
+  font-size: 24px;
+  font-size: 2.4rem;
+  text-align: center;
+  margin: 15px 0;
+  line-height: 1.2;
+}
+.container.home article h2 a {
+  color: #272727;
+}
+.container.home article h2 a:hover {
+  color: #4ab3a5;
+}
+.container.home article p {
+  font-size: 16px;
+  font-size: 1.6rem;
+  text-indent: 2em;
+  color: #757575;
+  line-height: 1.4;
+  word-warp: break-word;
+  word-break: break-all;
+}
+.container.home article .more {
+  float: right;
+  margin: 10px 0;
+  font-size: 14px;
+  font-size: 1.4rem;
+}
+.container .load {
+  margin: 15px 0;
+  padding: 0;
+}
+.container .load a {
+  display: block;
+  margin: 0 auto;
+  width: 140px;
+  height: 50px;
+  line-height: 50px;
+  color: #fff;
+  background: #4ab3a5;
+  text-align: center;
+  font-size: 16px;
+  font-size: 1.6rem;
+  border-radius: 6px;
+}
+/* footer */
+footer {
+  text-align: center;
+  color: #8e8e8e;
+  font-size: 14px;
+  font-size: 1.4rem;
+  margin-bottom: 20px;
 }

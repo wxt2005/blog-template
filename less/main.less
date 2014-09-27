@@ -75,10 +75,10 @@ table {
 }
 
 .row {
-    min-width: 300px;
+    min-width: 270px;
     margin: 0 auto;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 html {
@@ -232,6 +232,101 @@ header {
     }
 }
 
+/* conatiner */
 .container {
-    margin-top: 50px;
+
+    /* for home page */
+    &.home {
+        margin-top: 20px;
+
+        h1 {
+            .font-size(36);
+            text-align: center;
+            color: @text-lighter;
+            padding: 0 5px;
+        }
+
+        article {
+            margin: 40px 0 20px 0;
+            border-bottom: 1px dashed @text-lightest;
+
+            .info {
+                border-bottom: 1px solid @text-lightest;
+                padding: 0 2px 5px 2px;                
+                color: @text-lightest;
+                .font-size(14);
+
+                div {
+                   float: left; 
+                }
+
+                .categories, .tags {
+                    display: none;
+                }
+
+                .comments {
+                    float: right;
+                }
+
+            }
+
+            h2 {
+                color: #000;
+                .font-size(24);
+                text-align: center;
+                margin: 15px 0;
+                line-height: 1.2;
+
+                a {
+                    color: @text-dark;
+
+                    &:hover {
+                        color: @main-green;
+                    }
+                }
+            }
+
+            p {
+                .font-size(16);
+                text-indent: 2em;
+                color: darken(@text-lighter, 10%);
+                line-height: 1.4;
+                word-warp: break-word;
+                word-break: break-all;
+            }
+
+            .more {
+                float: right;
+                margin: 10px 0;
+                .font-size(14); 
+            }
+        }
+    }
+
+    /* for load button */
+    .load {
+        margin: 15px 0;
+        padding: 0;
+
+        a {
+            display: block;
+            margin: 0 auto;
+            width: 140px;
+            height: 50px;
+            line-height: 50px;
+            color: #fff;
+            background: @main-green;
+            text-align: center;
+            .font-size(16);
+            border-radius: 6px;
+        }
+    }
+}
+
+/* footer */
+footer {
+    text-align: center;
+    color: @text-lighter;
+    .font-size(14);
+    margin-bottom: 20px;
 }
