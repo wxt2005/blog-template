@@ -342,6 +342,11 @@ header {
             border-top: @header-border; 
             padding: 10px 5px;
             text-align: center;
+            display: none;
+
+            &.active {
+                display: block;
+            }
 
             li {
                 display: inline-block;
@@ -359,6 +364,7 @@ header {
             }
 
             @media @gte540 {
+                display: block;
                 position: absolute;
                 background: #fff;
                 border-radius: 4px;
@@ -387,8 +393,14 @@ header {
         .search {
             border-top: @header-border; 
             height: 35px;
+            display: none;
+
+            &.active {
+                display: block;
+            }
 
             @media @gte540 {
+                display: block;
                 float: right;
                 border: none;
                 margin-top: 14px;
@@ -403,6 +415,8 @@ header {
                 padding: 0 10px;
                 width: 100%;
                 .font-size(14);
+                color: @text-lighter;
+
                 &::-webkit-input-placeholder {
                     -webkit-font-smoothing: antialiased;
                 }
@@ -422,7 +436,6 @@ header {
                     display: inline-block;
                     margin: 0;
                     height: 30px;
-                    color: @text-lighter;
                     width: 130px;
                     .transition(0.3s ease);
 
@@ -439,7 +452,6 @@ header {
         }
 
         .tag, .category, .search {
-            display: none;
 
             @media @gte540 {
                 display: block;

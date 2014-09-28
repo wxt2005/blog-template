@@ -370,6 +370,10 @@ header .main-nav .drop-menu {
   border-top: 1px solid #e6eaed;
   padding: 10px 5px;
   text-align: center;
+  display: none;
+}
+header .main-nav .drop-menu.active {
+  display: block;
 }
 header .main-nav .drop-menu li {
   display: inline-block;
@@ -388,6 +392,7 @@ header .main-nav .drop-menu li a {
 }
 @media screen and (min-width: 540px) {
   header .main-nav .drop-menu {
+    display: block;
     position: absolute;
     background: #fff;
     border-radius: 4px;
@@ -418,9 +423,14 @@ header .main-nav .drop-menu li a {
 header .main-nav .search {
   border-top: 1px solid #e6eaed;
   height: 35px;
+  display: none;
+}
+header .main-nav .search.active {
+  display: block;
 }
 @media screen and (min-width: 540px) {
   header .main-nav .search {
+    display: block;
     float: right;
     border: none;
     margin-top: 14px;
@@ -436,6 +446,7 @@ header .main-nav .search input {
   width: 100%;
   font-size: 14px;
   font-size: 1.4rem;
+  color: #8e8e8e;
 }
 header .main-nav .search input::-webkit-input-placeholder {
   -webkit-font-smoothing: antialiased;
@@ -454,7 +465,6 @@ header .main-nav .search input:focus::-webkit-input-placeholder {
     display: inline-block;
     margin: 0;
     height: 30px;
-    color: #8e8e8e;
     width: 130px;
     -webkit-transition: 0.3s ease;
     transition: 0.3s ease;
@@ -467,11 +477,6 @@ header .main-nav .search input:focus::-webkit-input-placeholder {
     border: 1px solid #8e8e8e;
     width: 150px;
   }
-}
-header .main-nav .tag,
-header .main-nav .category,
-header .main-nav .search {
-  display: none;
 }
 @media screen and (min-width: 540px) {
   header .main-nav .tag,

@@ -3,22 +3,46 @@ $(function() {
     var $mainNav = $header.find('.main-nav');
     var $mainDropButtons = $mainNav.find('.drop').children('a');
     var $miniNav = $header.find('.mini-nav');
-    var $mminiDropButtons = $miniNav.find('.drop').children('a');
+    var $miniDropButtons = $miniNav.find('.drop').children('a');
     var $dropMenus = $mainNav.find('.drop-menu');
-    console.log($mainDropButtons);
+    var i = 0, l = 0;
 
-    $mainDropButtons.click(function(event) {
-        var $menu = $(this).next();
-        if ($menu.hasClass('active')) {
-            $menu.removeClass('active');
+    // 用于切换下拉菜单的激活状态
+    function toggleActive($targetNode, $allNodes) {
+        if ($targetNode.hasClass('active')) {
+            $targetNode.removeClass('active');
         } else {
-            $dropMenus.removeClass('active');
-            $menu.addClass('active');
+            $allNodes.removeClass('active');
+            $targetNode.addClass('active');
+        }
+    }
+
+    // 主导航下拉菜单事件
+    $mainDropButtons.click(function(event) {
+        var $subMenu = $(this).next();
+        toggleActive($subMenu, $dropMenus);
+        return false;
+    });
+
+    // mini导航下拉菜单事件
+    $miniDropButtons.click(function(event) {
+        var $target = $(event.target);
+        var $searchMenu = $mainNav.find('.search');
+        var $tagMenu = $mainNav.find('.tag .drop-menu');
+        var $cateMenu = $mainNav.find('.category .drop-menu');
+        var $menus = $dropMenus.add($searchMenu);
+
+        if ($target.parent().hasClass('search')) {
+            toggleActive($searchMenu, $menus);
+        } else if ($target.parent().hasClass('tag')) {
+            toggleActive($tagMenu, $menus);
+        } else if ($target.parent().hasClass('category')) {
+            toggleActive($cateMenu, $menus);
         }
         return false;
     });
 
-
+    // 点击页面任意位置隐藏导航菜单
     $(document).click(function(event) {
         $dropMenus.removeClass('active');
     });
