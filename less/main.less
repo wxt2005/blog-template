@@ -51,7 +51,7 @@ ol, ul {
 blockquote, q {
     quotes: none;
 
-    &::before, &::after {
+    &:before, &:after {
         content: '';
         content: none;
     }
@@ -66,7 +66,7 @@ table {
 .clearfix {
     zoom: 1;
 
-    &::after {
+    &:after {
         content: ".";
         height: 0;
         width: 0;
@@ -121,6 +121,7 @@ input {
 
 /* header */
 header {
+    &:extend(.clearfix all);
     @header-border: 1px solid #e6eaed;
 
     border-bottom: @header-border;
@@ -131,7 +132,7 @@ header {
 
     @media @gte540 {
         .image {
-            height: 300px;
+            height: 200px;
             background: url("@{img}header-img.jpg") no-repeat transparent;
             background-size: 100% auto;
             background-position: 0 100%;
@@ -214,7 +215,7 @@ header {
                 &.drop {
                     padding-right: 30px;
 
-                    & > a::after {
+                    & > a:after {
                         content: "";
                         height: 0;
                         width: 0;
@@ -279,6 +280,9 @@ header {
                 height: 35px;
                 padding: 0 10px;
                 .font-size(14);
+                &::-webkit-input-placeholder {
+                    -webkit-font-smoothing: antialiased;
+                }
 
                 &:focus {
                     border: none;
@@ -295,6 +299,10 @@ header {
                     display: inline-block;
                     margin: 0;
                     height: 30px;
+
+                    &::-webkit-input-placeholder {
+                        .font-size(16);
+                    }
 
                     &:focus {
                         border: 1px solid @text-lighter;
@@ -318,23 +326,23 @@ header {
         @media @gte540 {
             display: block;
             position: absolute;
-            width: 150px;
-            height: 150px;
+            width: 120px;
+            height: 120px;
             background: #fff;
             border-radius: 50%;
             z-index: 10;
             top: 50%;
             left: 50%;
-            margin-left: -80px;
-            margin-top: -80px;
+            margin-left: -65px;
+            margin-top: -65px;
             background: url("@{img}avatar.jpg") no-repeat transparent;
             border: 5px solid #fff;
+            background-size: 120px;
 
         }
 
         @media screen and (min-width: 540px) and (-webkit-device-pixel-ratio: 2) {
             background-image: url("@{img}avatar@2x.jpg");
-            background-size: 150px;
         }
     }
 }
@@ -355,10 +363,12 @@ header {
         }
 
         article {
+            &:extend(.clearfix all);
             margin: 40px 0 20px 0;
             border-bottom: 1px dashed @text-lightest;
 
             .info {
+                &:extend(.clearfix all);
                 border-bottom: 1px solid @text-lightest;
                 padding: 0 2px 5px 2px;                
                 color: @text-lightest;

@@ -116,10 +116,10 @@ blockquote,
 q {
   quotes: none;
 }
-blockquote::before,
-q::before,
-blockquote::after,
-q::after {
+blockquote:before,
+q:before,
+blockquote:after,
+q:after {
   content: '';
   content: none;
 }
@@ -128,10 +128,16 @@ table {
   border-spacing: 0;
 }
 /* overall */
-.clearfix {
+.clearfix,
+header,
+.container.home article,
+.container.home article .info {
   zoom: 1;
 }
-.clearfix::after {
+.clearfix:after,
+header:after,
+.container.home article:after,
+.container.home article .info:after {
   content: ".";
   height: 0;
   width: 0;
@@ -184,7 +190,7 @@ header .row {
 }
 @media screen and (min-width: 540px) {
   header .image {
-    height: 300px;
+    height: 200px;
     background: url("../images/header-img.jpg") no-repeat transparent;
     background-size: 100% auto;
     background-position: 0 100%;
@@ -259,7 +265,7 @@ header .main-nav {
   header .main-nav li.drop {
     padding-right: 30px;
   }
-  header .main-nav li.drop > a::after {
+  header .main-nav li.drop > a:after {
     content: "";
     height: 0;
     width: 0;
@@ -323,6 +329,9 @@ header .main-nav .search input {
   font-size: 14px;
   font-size: 1.4rem;
 }
+header .main-nav .search input::-webkit-input-placeholder {
+  -webkit-font-smoothing: antialiased;
+}
 header .main-nav .search input:focus {
   border: none;
   outline: none;
@@ -337,6 +346,10 @@ header .main-nav .search input:focus::-webkit-input-placeholder {
     display: inline-block;
     margin: 0;
     height: 30px;
+  }
+  header .main-nav .search input::-webkit-input-placeholder {
+    font-size: 16px;
+    font-size: 1.6rem;
   }
   header .main-nav .search input:focus {
     border: 1px solid #8e8e8e;
@@ -361,31 +374,29 @@ header .avatar {
   header .avatar {
     display: block;
     position: absolute;
-    width: 150px;
-    height: 150px;
+    width: 120px;
+    height: 120px;
     background: #fff;
     border-radius: 50%;
     z-index: 10;
     top: 50%;
     left: 50%;
-    margin-left: -80px;
-    margin-top: -80px;
+    margin-left: -65px;
+    margin-top: -65px;
     background: url("../images/avatar.jpg") no-repeat transparent;
     border: 5px solid #fff;
+    background-size: 120px;
   }
 }
 @media screen and (min-width: 540px) and (-webkit-device-pixel-ratio: 2) {
   header .avatar {
     background-image: url("../images/avatar@2x.jpg");
-    background-size: 150px;
   }
 }
 /* conatiner */
 .container {
   /* for home page */
-
   /* for load button */
-
 }
 .container.home {
   margin-top: 20px;
