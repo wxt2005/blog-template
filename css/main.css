@@ -157,6 +157,11 @@ header:after,
     max-width: 680px;
   }
 }
+@media screen and (min-width: 800px) {
+  .row {
+    max-width: 1200px;
+  }
+}
 html {
   font-size: 62.5%;
   -webkit-font-smoothing: antialiased;
@@ -190,6 +195,11 @@ header {
 header .row {
   padding: 0;
 }
+@media screen and (min-width: 800px) {
+  header .row {
+    max-width: 700px;
+  }
+}
 @media screen and (min-width: 540px) {
   header .image {
     height: 200px;
@@ -206,6 +216,11 @@ header .row {
     width: 100%;
     background: rgba(0, 0, 0, 0.1);
     z-index: 2;
+  }
+}
+@media screen and (min-width: 800px) {
+  header .image {
+    height: 300px;
   }
 }
 @media screen and (min-width: 540px) {
@@ -272,6 +287,45 @@ header .main-nav {
   }
   header .main-nav .category .drop-menu li:first-child {
     padding-top: 0;
+  }
+}
+@media screen and (min-width: 800px) {
+  header .main-nav .right {
+    float: right;
+    padding-left: 100px;
+  }
+  header .main-nav .right li {
+    width: 30%;
+    padding: 0;
+  }
+  header .main-nav .right li.search {
+    width: 60%;
+  }
+  header .main-nav .right li.search input {
+    float: right;
+  }
+  header .main-nav .left {
+    float: left;
+    padding-right: 100px;
+  }
+  header .main-nav .left li,
+  header .main-nav .left li.drop {
+    width: 30%;
+    padding: 0;
+  }
+  header .main-nav .left li a:after,
+  header .main-nav .left li.drop a:after {
+    right: 0;
+    margin-right: 5px;
+  }
+  header .main-nav .left,
+  header .main-nav .right {
+    width: 50%;
+    box-sizing: border-box;
+  }
+  header .main-nav .left li,
+  header .main-nav .right li {
+    text-align: center;
   }
 }
 @media screen and (min-width: 540px) {
@@ -429,6 +483,18 @@ header .avatar {
     background: url("../images/avatar.jpg") no-repeat transparent;
     border: 5px solid #ffffff;
     background-size: 120px;
+    -webkit-transition: 0.3s ease;
+    transition: 0.3s ease;
+  }
+}
+@media screen and (min-width: 800px) {
+  header .avatar {
+    width: 150px;
+    height: 150px;
+    top: 100%;
+    background-size: 150px;
+    margin-left: -80px;
+    margin-top: -80px;
   }
 }
 @media screen and (min-width: 540px) and (-webkit-device-pixel-ratio: 2) {
@@ -447,6 +513,11 @@ header .avatar {
 @media screen and (min-width: 540px) {
   .container.home {
     margin-top: 30px;
+  }
+}
+@media screen and (min-width: 800px) {
+  .container.home {
+    margin-top: 50px;
   }
 }
 .container.home h1 {

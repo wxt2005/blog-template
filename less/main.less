@@ -9,6 +9,7 @@
 @img: "../images/";
 
 @gte540: ~"screen and (min-width: 540px)";
+@gte800: ~"screen and (min-width: 800px)";
 @p2x: ~"screen and (-webkit-device-pixel-ratio: 2)";
 
 .font-size(@size) {
@@ -91,6 +92,10 @@ table {
     @media @gte540 {
         max-width: 680px;
     }
+
+    @media @gte800 {
+        max-width: 1200px;
+    }
 }
 
 html {
@@ -134,6 +139,10 @@ header {
 
     .row {
         padding: 0;
+
+        @media @gte800 {
+            max-width: 700px;
+        }
     }
 
     @media @gte540 {
@@ -153,6 +162,12 @@ header {
                 background: rgba(0, 0, 0, 0.1);
                 z-index: 2;
             }
+        }
+    }
+
+    @media @gte800 {
+        .image {
+            height: 300px;
         }
     }
 
@@ -227,6 +242,46 @@ header {
                     &:first-child {
                         padding-top: 0;
                     }
+                }
+            }
+        }
+
+        @media @gte800 {
+            .right {
+                float: right;
+                padding-left: 100px;
+
+                li {
+                    width: 30%;
+                    padding: 0;
+                }
+                li.search {
+                    width: 60%;
+
+                    input {
+                        float: right;
+                    }
+                }
+            }
+            .left {
+                float: left;
+                padding-right: 100px;
+
+                li, li.drop {
+                    width: 30%;
+                    padding: 0;
+
+                    a:after {
+                        right: 0;
+                        margin-right: 5px;
+                    }
+                }
+            }
+            .left, .right {
+                width: 50%;
+                box-sizing: border-box;
+                li {
+                    text-align: center;
                 }
             }
         }
@@ -390,7 +445,18 @@ header {
             background: url("@{img}avatar.jpg") no-repeat transparent;
             border: @border solid #fff;
             background-size: @size;
+            .transition(0.3s ease);
+        }
 
+        @media @gte800 {
+            @size: 150px;
+            @border: 5px;
+            width: @size;
+            height: @size;
+            top: 100%;
+            background-size: @size;
+            margin-left: -(@size + @border * 2) / 2;
+            margin-top: -(@size + @border * 2) / 2;
         }
 
         @media screen and (min-width: 540px) and (-webkit-device-pixel-ratio: 2) {
@@ -408,6 +474,10 @@ header {
 
         @media @gte540 {
             margin-top: 30px;
+        }
+
+        @media @gte800 {
+            margin-top: 50px;
         }
 
         h1 {
