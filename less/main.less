@@ -497,12 +497,26 @@ header {
                 margin: 40px 0 40px 0;
             }
 
+            @media @gte800 {
+                padding-left: 120px;
+                margin: 80px 0 80px 0;
+
+                &:first-of-type {
+                    margin-top: 40px;
+                }
+            }
+
             .info {
                 &:extend(.clearfix all);
                 border-bottom: 1px solid @text-lightest;
                 padding: 0 2px 5px 2px;                
                 color: @text-lightest;
                 .font-size(12);
+                position: relative;
+
+                @media @gte800 {
+                    padding-left: 10px;
+                }
 
                 div {
                    float: left; 
@@ -514,6 +528,36 @@ header {
 
                 .comments {
                     float: right;
+                }
+
+                .big-date {
+                    display: none;
+
+                    @media @gte800 {
+                        display: block;
+                        position: absolute;
+                        padding: 0;
+                        margin: 0;
+                        border: 6px solid @text-lightest;
+                        width: 100px;
+                        height: 100px;
+                        border-radius: 50%;
+                        left: 0;
+                        margin-left: -112px;
+                        top: 0;
+                        margin-top: -40px;
+                        text-align: center;
+
+                        span {
+                            .font-size(30);
+                            line-height: 100px;
+                            font-weight: bold;
+
+                            &.month {
+                                margin-left: 5px;
+                            }
+                        }
+                    }
                 }
 
                 @media @gte540 {
@@ -566,6 +610,10 @@ header {
                     .font-size(30);
                 }
 
+                @media @gte800 {
+                    padding-left: 10px;
+                }
+
                 a {
                     color: @text-dark;
 
@@ -577,16 +625,20 @@ header {
 
             p {
                 .font-size(14);
-                text-indent: 2em;
                 color: darken(@text-lighter, 10%);
                 line-height: 1.4;
                 word-warp: break-word;
                 word-break: break-all;
                 text-align: justify;
+                margin-bottom: 1em;
 
                 @media @gte540 {
                     line-height: 1.6;
                     .font-size(16);
+                }
+
+                @media @gte800 {
+                    padding-left: 10px;
                 }
             }
 

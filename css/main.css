@@ -537,12 +537,27 @@ header .avatar {
     margin: 40px 0 40px 0;
   }
 }
+@media screen and (min-width: 800px) {
+  .container.home article {
+    padding-left: 120px;
+    margin: 80px 0 80px 0;
+  }
+  .container.home article:first-of-type {
+    margin-top: 40px;
+  }
+}
 .container.home article .info {
   border-bottom: 1px solid #b7b7b7;
   padding: 0 2px 5px 2px;
   color: #b7b7b7;
   font-size: 12px;
   font-size: 1.2rem;
+  position: relative;
+}
+@media screen and (min-width: 800px) {
+  .container.home article .info {
+    padding-left: 10px;
+  }
 }
 .container.home article .info div {
   float: left;
@@ -553,6 +568,35 @@ header .avatar {
 }
 .container.home article .info .comments {
   float: right;
+}
+.container.home article .info .big-date {
+  display: none;
+}
+@media screen and (min-width: 800px) {
+  .container.home article .info .big-date {
+    display: block;
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    border: 6px solid #b7b7b7;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    left: 0;
+    margin-left: -112px;
+    top: 0;
+    margin-top: -40px;
+    text-align: center;
+  }
+  .container.home article .info .big-date span {
+    font-size: 30px;
+    font-size: 3rem;
+    line-height: 100px;
+    font-weight: bold;
+  }
+  .container.home article .info .big-date span.month {
+    margin-left: 5px;
+  }
 }
 @media screen and (min-width: 540px) {
   .container.home article .info {
@@ -603,6 +647,11 @@ header .avatar {
     font-size: 3rem;
   }
 }
+@media screen and (min-width: 800px) {
+  .container.home article h2 {
+    padding-left: 10px;
+  }
+}
 .container.home article h2 a {
   color: #272727;
 }
@@ -612,18 +661,23 @@ header .avatar {
 .container.home article p {
   font-size: 14px;
   font-size: 1.4rem;
-  text-indent: 2em;
   color: #757575;
   line-height: 1.4;
   word-warp: break-word;
   word-break: break-all;
   text-align: justify;
+  margin-bottom: 1em;
 }
 @media screen and (min-width: 540px) {
   .container.home article p {
     line-height: 1.6;
     font-size: 16px;
     font-size: 1.6rem;
+  }
+}
+@media screen and (min-width: 800px) {
+  .container.home article p {
+    padding-left: 10px;
   }
 }
 .container.home article .more {
