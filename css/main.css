@@ -371,7 +371,7 @@ header .avatar {
     margin-left: -80px;
     margin-top: -80px;
     background: url("../images/avatar.jpg") no-repeat transparent;
-    border: 10px solid #fff;
+    border: 5px solid #fff;
   }
 }
 @media screen and (min-width: 540px) and (-webkit-device-pixel-ratio: 2) {
