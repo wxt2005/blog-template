@@ -190,7 +190,7 @@ input::-webkit-search-cancel-button {
 }
 /* header */
 header {
-  border-bottom: 1px solid #e6eaed;
+  border-bottom: 1px solid #ebebeb;
 }
 header .row {
   padding: 0;
@@ -201,6 +201,9 @@ header .row {
   }
 }
 @media screen and (min-width: 540px) {
+  header {
+    border-bottom-color: #b7b7b7;
+  }
   header .image {
     height: 200px;
     background: url("../images/header-img.jpg") no-repeat transparent;
@@ -230,12 +233,12 @@ header .row {
 }
 header .mini-nav li {
   float: right;
-  border-left: 1px solid #e6eaed;
+  border-left: 1px solid #ebebeb;
 }
 header .mini-nav li:first-child {
   float: left;
   border-left: none;
-  border-right: 1px solid #e6eaed;
+  border-right: 1px solid #ebebeb;
 }
 header .mini-nav li a {
   display: block;
@@ -281,7 +284,7 @@ header .main-nav {
     float: none;
     width: 100%;
     text-align: center;
-    border-bottom: 1px solid #b7b7b7;
+    border-bottom: 1px solid #ebebeb;
     padding-bottom: 10px;
     padding-top: 10px;
   }
@@ -367,7 +370,7 @@ header .main-nav > ul > li > a {
   }
 }
 header .main-nav .drop-menu {
-  border-top: 1px solid #e6eaed;
+  border-top: 1px solid #ebebeb;
   padding: 10px 5px;
   text-align: center;
   display: none;
@@ -406,8 +409,8 @@ header .main-nav .drop-menu li a {
     padding-right: 10px;
     opacity: 0;
     pointer-events: none;
-    -webkit-transition: 0.5s cubic-bezier(0.34, 1.21, 0.4, 1);
-    transition: 0.5s cubic-bezier(0.34, 1.21, 0.4, 1);
+    -webkit-transition: 0.5s cubic-bezier(0.35, 1.2, 0.4, 1);
+    transition: 0.5s cubic-bezier(0.35, 1.2, 0.4, 1);
     -webkit-transform: scale(0);
     transform: scale(0);
     -webkit-transform-origin: 50% 0;
@@ -421,7 +424,7 @@ header .main-nav .drop-menu li a {
   }
 }
 header .main-nav .search {
-  border-top: 1px solid #e6eaed;
+  border-top: 1px solid #ebebeb;
   height: 35px;
   display: none;
 }
@@ -549,9 +552,17 @@ header .avatar {
   padding: 0 5px;
   font-weight: bold;
 }
+@media screen and (min-width: 540px) {
+  .container.home h1 {
+    padding: 0 5px 20px 5px;
+    background: url("../images/head-line.png") no-repeat;
+    background-position: 50% 100%;
+  }
+}
 .container.home article {
-  margin: 40px 0 20px 0;
-  border-bottom: 1px dashed #b7b7b7;
+  margin: 20px 0 20px 0;
+  background: url("../images/dash-line.png") repeat-x;
+  background-position: 0 100%;
 }
 @media screen and (min-width: 540px) {
   .container.home article {
@@ -568,7 +579,7 @@ header .avatar {
   }
 }
 .container.home article .info {
-  border-bottom: 1px solid #b7b7b7;
+  border-bottom: 1px solid #ebebeb;
   padding: 0 2px 5px 2px;
   color: #b7b7b7;
   font-size: 12px;
@@ -577,7 +588,7 @@ header .avatar {
 }
 @media screen and (min-width: 800px) {
   .container.home article .info {
-    padding-left: 10px;
+    padding-left: 15px;
   }
 }
 .container.home article .info div {
@@ -599,15 +610,16 @@ header .avatar {
     position: absolute;
     padding: 0;
     margin: 0;
-    border: 6px solid #b7b7b7;
+    border: 6px solid #ebebeb;
     width: 100px;
     height: 100px;
     border-radius: 50%;
     left: 0;
     margin-left: -112px;
     top: 0;
-    margin-top: -40px;
+    margin-top: -30px;
     text-align: center;
+    overflow: hidden;
   }
   .container.home article .info .big-date span {
     font-size: 30px;
@@ -640,7 +652,8 @@ header .avatar {
   }
   .container.home article .info div {
     margin-right: 10px;
-    border-left: 1px solid #8e8e8e;
+    margin-bottom: 10px;
+    border-left: 1px solid #ebebeb;
     padding-left: 10px;
     color: #4ab3a5;
   }
@@ -666,6 +679,8 @@ header .avatar {
     text-align: left;
     font-size: 30px;
     font-size: 3rem;
+    margin-top: 25px;
+    margin-bottom: 20px;
   }
 }
 @media screen and (min-width: 800px) {
@@ -709,16 +724,23 @@ header .avatar {
 }
 @media screen and (min-width: 540px) {
   .container.home article .more {
-    font-size: 14px;
-    font-size: 1.4rem;
-    margin: 10px 0 20px 0;
+    font-size: 16px;
+    font-size: 1.6rem;
+    margin: 10px 0 40px 0;
+    float: left;
   }
   .container.home article .more a {
-    border-bottom: 1px solid #b7b7b7;
+    border-bottom: 1px solid #ebebeb;
     padding-bottom: 3px;
+    color: #4ab3a5;
   }
   .container.home article .more a:hover {
     border-color: #4ab3a5;
+  }
+}
+@media screen and (min-width: 800px) {
+  .container.home article .more {
+    margin-left: 10px;
   }
 }
 .container .load {

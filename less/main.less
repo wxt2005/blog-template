@@ -3,7 +3,7 @@
 @text-dark: #272727;
 @text-lighter: #8e8e8e;
 @text-lightest: #b7b7b7;
-@nav-gray: #bcbcbc;
+@border-gray: #ebebeb;
 @background-white: #fefefe;
 
 @img: "../images/";
@@ -143,7 +143,7 @@ input {
 /* header */
 header {
     &:extend(.clearfix all);
-    @header-border: 1px solid #e6eaed;
+    @header-border: 1px solid @border-gray;
 
     border-bottom: @header-border;
 
@@ -156,6 +156,8 @@ header {
     }
 
     @media @gte540 {
+        border-bottom-color: @text-lightest;
+
         .image {
             height: 200px;
             background: url("@{img}header-img.jpg") no-repeat transparent;
@@ -245,7 +247,7 @@ header {
                     float: none;
                     width: 100%;
                     text-align: center;
-                    border-bottom: 1px solid @text-lightest;
+                    border-bottom: 1px solid @border-gray;
                     padding-bottom: 10px;
                     padding-top: 10px;
 
@@ -378,7 +380,7 @@ header {
                 padding-right: 10px;
                 opacity: 0;
                 pointer-events: none;
-                .transition(0.5s cubic-bezier(0.34, 1.21, 0.4, 1));
+                .transition(0.5s cubic-bezier(0.35, 1.2, 0.4, 1));
                 .transform(scale(0));
                 .transform-origin(50% 0);
 
@@ -521,12 +523,20 @@ header {
             color: @text-lighter;
             padding: 0 5px;
             font-weight: bold;
+
+            @media @gte540 {
+                padding: 0 5px 20px 5px;
+                background: url("@{img}head-line.png") no-repeat;
+                background-position: 50% 100%;
+            }
         }
 
         article {
             &:extend(.clearfix all);
-            margin: 40px 0 20px 0;
-            border-bottom: 1px dashed @text-lightest;
+            margin: 20px 0 20px 0;
+            //border-bottom: 1px dashed @border-gray;
+            background: url("@{img}dash-line.png") repeat-x;
+            background-position: 0 100%;
 
             @media @gte540 {
                 margin: 40px 0 40px 0;
@@ -543,14 +553,14 @@ header {
 
             .info {
                 &:extend(.clearfix all);
-                border-bottom: 1px solid @text-lightest;
+                border-bottom: 1px solid @border-gray;
                 padding: 0 2px 5px 2px;                
                 color: @text-lightest;
                 .font-size(12);
                 position: relative;
 
                 @media @gte800 {
-                    padding-left: 10px;
+                    padding-left: 15px;
                 }
 
                 div {
@@ -573,15 +583,16 @@ header {
                         position: absolute;
                         padding: 0;
                         margin: 0;
-                        border: 6px solid @text-lightest;
+                        border: 6px solid @border-gray;
                         width: 100px;
                         height: 100px;
                         border-radius: 50%;
                         left: 0;
                         margin-left: -112px;
                         top: 0;
-                        margin-top: -40px;
+                        margin-top: -30px;
                         text-align: center;
+                        overflow: hidden;
 
                         span {
                             .font-size(30);
@@ -616,7 +627,8 @@ header {
 
                     div {
                         margin-right: 10px;
-                        border-left: 1px solid @text-lighter;
+                        margin-bottom: 10px;
+                        border-left: 1px solid @border-gray;
                         padding-left: 10px;
                         color: @main-green;
 
@@ -643,6 +655,8 @@ header {
                 @media @gte540 {
                     text-align: left;
                     .font-size(30);
+                    margin-top: 25px;
+                    margin-bottom: 20px;
                 }
 
                 @media @gte800 {
@@ -683,17 +697,23 @@ header {
                 .font-size(12); 
 
                 @media @gte540 {
-                    .font-size(14); 
-                    margin: 10px 0 20px 0;
+                    .font-size(16); 
+                    margin: 10px 0 40px 0;
+                    float: left;
 
                     a {
-                        border-bottom: 1px solid @text-lightest;
+                        border-bottom: 1px solid @border-gray;
                         padding-bottom: 3px;
+                        color: @main-green;
 
                         &:hover {
                            border-color: @main-green; 
                         }
                     }
+                }
+
+                @media @gte800 {
+                    margin-left: 10px;
                 }
             }
         }
