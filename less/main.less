@@ -136,6 +136,16 @@ header {
             background-size: 100% auto;
             background-position: 0 100%;
             position: relative;
+
+            .overlay {
+                position: absolute;
+                height: 100%;
+                top: 0;
+                left: 0;
+                width: 100%;
+                background: rgba(0, 0, 0, 0.1);
+                z-index: 2;
+            }
         }
     }
 
@@ -321,7 +331,7 @@ header {
             border: 10px solid #fff;
 
         }
-        
+
         @media screen and (min-width: 540px) and (-webkit-device-pixel-ratio: 2) {
             background-image: url("@{img}avatar@2x.jpg");
             background-size: 150px;
