@@ -324,20 +324,23 @@ header {
         display: none;
 
         @media @gte540 {
+            @size: 120px;
+            @border: 5px;
+
             display: block;
             position: absolute;
-            width: 120px;
-            height: 120px;
+            width: @size;
+            height: @size;
             background: #fff;
             border-radius: 50%;
             z-index: 10;
             top: 50%;
             left: 50%;
-            margin-left: -65px;
-            margin-top: -65px;
+            margin-left: -(@size + @border * 2) / 2;
+            margin-top: -(@size + @border * 2) / 2;
             background: url("@{img}avatar.jpg") no-repeat transparent;
-            border: 5px solid #fff;
-            background-size: 120px;
+            border: @border solid #fff;
+            background-size: @size;
 
         }
 

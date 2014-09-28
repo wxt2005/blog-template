@@ -384,7 +384,7 @@ header .avatar {
     margin-left: -65px;
     margin-top: -65px;
     background: url("../images/avatar.jpg") no-repeat transparent;
-    border: 5px solid #fff;
+    border: 5px solid #ffffff;
     background-size: 120px;
   }
 }
