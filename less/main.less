@@ -16,6 +16,11 @@
     font-size: unit(@size/10, rem);
 }
 
+.transition(@property) {
+    -webkit-transition: @property;
+    transition: @property;
+}
+
 /**
  * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
  * http://cssreset.com
@@ -107,6 +112,7 @@ a {
     text-decoration: none;
     color: @text-lighter;
     outline: 0;
+    .transition(0.2s ease);
 
     &:hover {
         color: @main-green;
@@ -203,6 +209,26 @@ header {
         @media @gte540 {
             float: none;
             height: 60px;
+
+            .category .drop-menu {
+                width: 80px;
+                padding-left: 10px;
+                padding-right: 10px;
+                margin-left: -50px;
+
+                li {
+                    float: none;
+                    width: 100%;
+                    text-align: center;
+                    border-bottom: 1px solid @text-lightest;
+                    padding-bottom: 10px;
+                    padding-top: 10px;
+
+                    &:first-child {
+                        padding-top: 0;
+                    }
+                }
+            }
         }
 
         li {
@@ -221,11 +247,11 @@ header {
                         width: 0;
                         border-style: solid;
                         border-color: @text-lighter transparent transparent transparent;
-                        border-width: 8px;
+                        border-width: 6px;
                         position: absolute;
                         top: 50%;
-                        margin-top: -4px;
-                        right: 10px;
+                        margin-top: -3px;
+                        right: 15px;
                     }
                 }
             }
@@ -239,6 +265,11 @@ header {
                 display: inline;
                 .font-size(16);
                 line-height: 60px;
+                padding-bottom: 5px;
+
+                &:hover {
+                    border-bottom: 4px solid @text-lighter;
+                }
             }
         }
 
@@ -250,6 +281,12 @@ header {
             li {
                 display: inline-block;
                 padding: 5px;
+                
+                @media @gte540 {
+                    width: 50%;
+                    box-sizing: border-box;
+                    text-align: left;
+                }
             }
 
             li a {
@@ -259,6 +296,13 @@ header {
             @media @gte540 {
                 position: absolute;
                 display: none;
+                background: #fff;
+                border-radius: 4px;
+                width: 120px;
+                box-shadow: 0 2px 4px 2px rgba(0, 0, 0, 0.2);
+                left: 50%;
+                margin-left: -60px;
+                top: 50px;
             }
         }
 
@@ -279,6 +323,7 @@ header {
                 border: none;
                 height: 35px;
                 padding: 0 10px;
+                width: 100%;
                 .font-size(14);
                 &::-webkit-input-placeholder {
                     -webkit-font-smoothing: antialiased;
@@ -299,6 +344,9 @@ header {
                     display: inline-block;
                     margin: 0;
                     height: 30px;
+                    color: @text-lighter;
+                    width: 130px;
+                    .transition(0.3s ease);
 
                     &::-webkit-input-placeholder {
                         .font-size(16);
@@ -306,6 +354,7 @@ header {
 
                     &:focus {
                         border: 1px solid @text-lighter;
+                        width: 150px;
                     }
                 }
             }
@@ -357,6 +406,10 @@ header {
     &.home {
         margin-top: 20px;
 
+        @media @gte540 {
+            margin-top: 30px;
+        }
+
         h1 {
             .font-size(36);
             text-align: center;
@@ -370,12 +423,16 @@ header {
             margin: 40px 0 20px 0;
             border-bottom: 1px dashed @text-lightest;
 
+            @media @gte540 {
+                margin: 40px 0 40px 0;
+            }
+
             .info {
                 &:extend(.clearfix all);
                 border-bottom: 1px solid @text-lightest;
                 padding: 0 2px 5px 2px;                
                 color: @text-lightest;
-                .font-size(14);
+                .font-size(12);
 
                 div {
                    float: left; 
@@ -389,14 +446,55 @@ header {
                     float: right;
                 }
 
+                @media @gte540 {
+                    .font-size(14);
+
+                    .categories, .tags {
+                        display: block;
+                    }
+
+                    .time-stamp {
+                        float: right;
+                        color: @text-lighter;
+                        padding-left: 0;
+                        border-left: 0;
+                        margin-right: 0;
+                    }
+
+                    .comments {
+                        float: left;
+                    }
+
+                    div {
+                        margin-right: 10px;
+                        border-left: 1px solid @text-lighter;
+                        padding-left: 10px;
+                        color: @main-green;
+
+                        &:first-child {
+                            padding-left: 0;
+                            border-left: 0;
+                        }
+
+                        ul, li {
+                            display: inline-block;
+                        }
+                    }
+                }
+
             }
 
             h2 {
                 color: #000;
-                .font-size(24);
+                .font-size(20);
                 text-align: center;
                 margin: 15px 0;
                 line-height: 1.2;
+
+                @media @gte540 {
+                    text-align: left;
+                    .font-size(30);
+                }
 
                 a {
                     color: @text-dark;
@@ -408,18 +506,38 @@ header {
             }
 
             p {
-                .font-size(16);
+                .font-size(14);
                 text-indent: 2em;
                 color: darken(@text-lighter, 10%);
                 line-height: 1.4;
                 word-warp: break-word;
                 word-break: break-all;
+                text-align: justify;
+
+                @media @gte540 {
+                    line-height: 1.6;
+                    .font-size(16);
+                }
             }
 
             .more {
                 float: right;
                 margin: 10px 0;
-                .font-size(14); 
+                .font-size(12); 
+
+                @media @gte540 {
+                    .font-size(14); 
+                    margin: 10px 0 20px 0;
+
+                    a {
+                        border-bottom: 1px solid @text-lightest;
+                        padding-bottom: 3px;
+
+                        &:hover {
+                           border-color: @main-green; 
+                        }
+                    }
+                }
             }
         }
     }
@@ -441,6 +559,10 @@ header {
             .font-size(16);
             border-radius: 6px;
         }
+
+        @media @gte540 {
+            margin: 30px 0;
+        }
     }
 }
 
@@ -450,4 +572,8 @@ footer {
     color: @text-lighter;
     .font-size(14);
     margin-bottom: 20px;
+
+    @media @gte540 {
+        .font-size(16);
+    }
 }

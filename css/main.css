@@ -173,6 +173,8 @@ a {
   text-decoration: none;
   color: #8e8e8e;
   outline: 0;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
 }
 a:hover {
   color: #4ab3a5;
@@ -254,6 +256,23 @@ header .main-nav {
     float: none;
     height: 60px;
   }
+  header .main-nav .category .drop-menu {
+    width: 80px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: -50px;
+  }
+  header .main-nav .category .drop-menu li {
+    float: none;
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid #b7b7b7;
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }
+  header .main-nav .category .drop-menu li:first-child {
+    padding-top: 0;
+  }
 }
 @media screen and (min-width: 540px) {
   header .main-nav li {
@@ -271,11 +290,11 @@ header .main-nav {
     width: 0;
     border-style: solid;
     border-color: #8e8e8e transparent transparent transparent;
-    border-width: 8px;
+    border-width: 6px;
     position: absolute;
     top: 50%;
-    margin-top: -4px;
-    right: 10px;
+    margin-top: -3px;
+    right: 15px;
   }
 }
 header .main-nav > ul > li > a {
@@ -287,6 +306,10 @@ header .main-nav > ul > li > a {
     font-size: 16px;
     font-size: 1.6rem;
     line-height: 60px;
+    padding-bottom: 5px;
+  }
+  header .main-nav > ul > li > a:hover {
+    border-bottom: 4px solid #8e8e8e;
   }
 }
 header .main-nav .drop-menu {
@@ -298,6 +321,13 @@ header .main-nav .drop-menu li {
   display: inline-block;
   padding: 5px;
 }
+@media screen and (min-width: 540px) {
+  header .main-nav .drop-menu li {
+    width: 50%;
+    box-sizing: border-box;
+    text-align: left;
+  }
+}
 header .main-nav .drop-menu li a {
   font-size: 14px;
   font-size: 1.4rem;
@@ -306,6 +336,13 @@ header .main-nav .drop-menu li a {
   header .main-nav .drop-menu {
     position: absolute;
     display: none;
+    background: #fff;
+    border-radius: 4px;
+    width: 120px;
+    box-shadow: 0 2px 4px 2px rgba(0, 0, 0, 0.2);
+    left: 50%;
+    margin-left: -60px;
+    top: 50px;
   }
 }
 header .main-nav .search {
@@ -326,6 +363,7 @@ header .main-nav .search input {
   border: none;
   height: 35px;
   padding: 0 10px;
+  width: 100%;
   font-size: 14px;
   font-size: 1.4rem;
 }
@@ -346,6 +384,10 @@ header .main-nav .search input:focus::-webkit-input-placeholder {
     display: inline-block;
     margin: 0;
     height: 30px;
+    color: #8e8e8e;
+    width: 130px;
+    -webkit-transition: 0.3s ease;
+    transition: 0.3s ease;
   }
   header .main-nav .search input::-webkit-input-placeholder {
     font-size: 16px;
@@ -353,6 +395,7 @@ header .main-nav .search input:focus::-webkit-input-placeholder {
   }
   header .main-nav .search input:focus {
     border: 1px solid #8e8e8e;
+    width: 150px;
   }
 }
 header .main-nav .tag,
@@ -401,6 +444,11 @@ header .avatar {
 .container.home {
   margin-top: 20px;
 }
+@media screen and (min-width: 540px) {
+  .container.home {
+    margin-top: 30px;
+  }
+}
 .container.home h1 {
   font-size: 36px;
   font-size: 3.6rem;
@@ -413,12 +461,17 @@ header .avatar {
   margin: 40px 0 20px 0;
   border-bottom: 1px dashed #b7b7b7;
 }
+@media screen and (min-width: 540px) {
+  .container.home article {
+    margin: 40px 0 40px 0;
+  }
+}
 .container.home article .info {
   border-bottom: 1px solid #b7b7b7;
   padding: 0 2px 5px 2px;
   color: #b7b7b7;
-  font-size: 14px;
-  font-size: 1.4rem;
+  font-size: 12px;
+  font-size: 1.2rem;
 }
 .container.home article .info div {
   float: left;
@@ -430,13 +483,54 @@ header .avatar {
 .container.home article .info .comments {
   float: right;
 }
+@media screen and (min-width: 540px) {
+  .container.home article .info {
+    font-size: 14px;
+    font-size: 1.4rem;
+  }
+  .container.home article .info .categories,
+  .container.home article .info .tags {
+    display: block;
+  }
+  .container.home article .info .time-stamp {
+    float: right;
+    color: #8e8e8e;
+    padding-left: 0;
+    border-left: 0;
+    margin-right: 0;
+  }
+  .container.home article .info .comments {
+    float: left;
+  }
+  .container.home article .info div {
+    margin-right: 10px;
+    border-left: 1px solid #8e8e8e;
+    padding-left: 10px;
+    color: #4ab3a5;
+  }
+  .container.home article .info div:first-child {
+    padding-left: 0;
+    border-left: 0;
+  }
+  .container.home article .info div ul,
+  .container.home article .info div li {
+    display: inline-block;
+  }
+}
 .container.home article h2 {
   color: #000;
-  font-size: 24px;
-  font-size: 2.4rem;
+  font-size: 20px;
+  font-size: 2rem;
   text-align: center;
   margin: 15px 0;
   line-height: 1.2;
+}
+@media screen and (min-width: 540px) {
+  .container.home article h2 {
+    text-align: left;
+    font-size: 30px;
+    font-size: 3rem;
+  }
 }
 .container.home article h2 a {
   color: #272727;
@@ -445,19 +539,41 @@ header .avatar {
   color: #4ab3a5;
 }
 .container.home article p {
-  font-size: 16px;
-  font-size: 1.6rem;
+  font-size: 14px;
+  font-size: 1.4rem;
   text-indent: 2em;
   color: #757575;
   line-height: 1.4;
   word-warp: break-word;
   word-break: break-all;
+  text-align: justify;
+}
+@media screen and (min-width: 540px) {
+  .container.home article p {
+    line-height: 1.6;
+    font-size: 16px;
+    font-size: 1.6rem;
+  }
 }
 .container.home article .more {
   float: right;
   margin: 10px 0;
-  font-size: 14px;
-  font-size: 1.4rem;
+  font-size: 12px;
+  font-size: 1.2rem;
+}
+@media screen and (min-width: 540px) {
+  .container.home article .more {
+    font-size: 14px;
+    font-size: 1.4rem;
+    margin: 10px 0 20px 0;
+  }
+  .container.home article .more a {
+    border-bottom: 1px solid #b7b7b7;
+    padding-bottom: 3px;
+  }
+  .container.home article .more a:hover {
+    border-color: #4ab3a5;
+  }
 }
 .container .load {
   margin: 15px 0;
@@ -476,6 +592,11 @@ header .avatar {
   font-size: 1.6rem;
   border-radius: 6px;
 }
+@media screen and (min-width: 540px) {
+  .container .load {
+    margin: 30px 0;
+  }
+}
 /* footer */
 footer {
   text-align: center;
@@ -483,4 +604,10 @@ footer {
   font-size: 14px;
   font-size: 1.4rem;
   margin-bottom: 20px;
+}
+@media screen and (min-width: 540px) {
+  footer {
+    font-size: 16px;
+    font-size: 1.6rem;
+  }
 }
