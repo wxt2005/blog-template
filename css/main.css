@@ -345,15 +345,15 @@ header .main-nav .search {
     display: block;
   }
 }
-header .avatar-container {
+header .avatar {
   display: none;
 }
 @media screen and (min-width: 540px) {
-  header .avatar-container {
+  header .avatar {
     display: block;
     position: absolute;
-    width: 160px;
-    height: 160px;
+    width: 150px;
+    height: 150px;
     background: #fff;
     border-radius: 50%;
     z-index: 10;
@@ -361,17 +361,14 @@ header .avatar-container {
     left: 50%;
     margin-left: -80px;
     margin-top: -80px;
-  }
-  header .avatar-container .avatar-image {
     background: url("../images/avatar.jpg") no-repeat transparent;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-left: -75px;
-    margin-top: -75px;
+    border: 10px solid #fff;
+  }
+}
+@media screen and (min-width: 540px) and (-webkit-device-pixel-ratio: 2) {
+  header .avatar {
+    background-image: url("../images/avatar@2x.jpg");
+    background-size: 150px;
   }
 }
 /* conatiner */

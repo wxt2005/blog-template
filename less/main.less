@@ -302,14 +302,14 @@ header {
         }
     }
 
-    .avatar-container {
+    .avatar {
         display: none;
 
         @media @gte540 {
             display: block;
             position: absolute;
-            width: 160px;
-            height: 160px;
+            width: 150px;
+            height: 150px;
             background: #fff;
             border-radius: 50%;
             z-index: 10;
@@ -317,18 +317,14 @@ header {
             left: 50%;
             margin-left: -80px;
             margin-top: -80px;
+            background: url("@{img}avatar.jpg") no-repeat transparent;
+            border: 10px solid #fff;
 
-            .avatar-image {
-                background: url("@{img}avatar.jpg") no-repeat transparent;
-                width: 150px;
-                height: 150px;
-                border-radius: 50%;
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                margin-left: -75px;
-                margin-top: -75px;
-            }
+        }
+        
+        @media screen and (min-width: 540px) and (-webkit-device-pixel-ratio: 2) {
+            background-image: url("@{img}avatar@2x.jpg");
+            background-size: 150px;
         }
     }
 }
