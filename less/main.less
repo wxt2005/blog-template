@@ -483,6 +483,10 @@ header {
             border: @border solid #fff;
             background-size: @size;
             .transition(0.3s ease);
+
+            @media (-webkit-device-pixel-ratio: 2) {
+                background-image: url("@{img}avatar@2x.jpg");
+            }
         }
 
         @media @gte800 {
@@ -494,10 +498,6 @@ header {
             background-size: @size;
             margin-left: -(@size + @border * 2) / 2;
             margin-top: -(@size + @border * 2) / 2;
-        }
-
-        @media screen and (min-width: 540px) and (-webkit-device-pixel-ratio: 2) {
-            background-image: url("@{img}avatar@2x.jpg");
         }
     }
 }

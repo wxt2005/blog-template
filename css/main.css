@@ -511,6 +511,11 @@ header .avatar {
     transition: 0.3s ease;
   }
 }
+@media screen and (min-width: 540px) and (-webkit-device-pixel-ratio: 2) {
+  header .avatar {
+    background-image: url("../images/avatar@2x.jpg");
+  }
+}
 @media screen and (min-width: 800px) {
   header .avatar {
     width: 150px;
@@ -519,11 +524,6 @@ header .avatar {
     background-size: 150px;
     margin-left: -80px;
     margin-top: -80px;
-  }
-}
-@media screen and (min-width: 540px) and (-webkit-device-pixel-ratio: 2) {
-  header .avatar {
-    background-image: url("../images/avatar@2x.jpg");
   }
 }
 /* conatiner */
