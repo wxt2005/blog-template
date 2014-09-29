@@ -130,14 +130,16 @@ table {
 /* overall */
 .clearfix,
 header,
-.container.home article,
-.container.home article .info {
+.container article,
+.container article .info,
+.container.post .control {
   zoom: 1;
 }
 .clearfix:after,
 header:after,
-.container.home article:after,
-.container.home article .info:after {
+.container article:after,
+.container article .info:after,
+.container.post .control:after {
   content: ".";
   height: 0;
   width: 0;
@@ -528,23 +530,21 @@ header .avatar {
 }
 /* conatiner */
 .container {
-  /* for home page */
-  /* for load button */
-}
-.container.home {
   margin-top: 20px;
+  /* for load button */
+  /* specific for post */
 }
 @media screen and (min-width: 540px) {
-  .container.home {
+  .container {
     margin-top: 30px;
   }
 }
 @media screen and (min-width: 800px) {
-  .container.home {
+  .container {
     margin-top: 50px;
   }
 }
-.container.home h1 {
+.container h1 {
   font-size: 36px;
   font-size: 3.6rem;
   text-align: center;
@@ -553,32 +553,32 @@ header .avatar {
   font-weight: bold;
 }
 @media screen and (min-width: 540px) {
-  .container.home h1 {
+  .container h1 {
     padding: 0 5px 20px 5px;
     background: url("../images/head-line.png") no-repeat;
     background-position: 50% 100%;
   }
 }
-.container.home article {
+.container article {
   margin: 20px 0 20px 0;
   background: url("../images/dash-line.png") repeat-x;
   background-position: 0 100%;
 }
 @media screen and (min-width: 540px) {
-  .container.home article {
+  .container article {
     margin: 40px 0 40px 0;
   }
 }
 @media screen and (min-width: 800px) {
-  .container.home article {
+  .container article {
     padding-left: 120px;
     margin: 80px 0 80px 0;
   }
-  .container.home article:first-of-type {
+  .container article:first-of-type {
     margin-top: 40px;
   }
 }
-.container.home article .info {
+.container article .info {
   border-bottom: 1px solid #ebebeb;
   padding: 0 2px 5px 2px;
   color: #b7b7b7;
@@ -587,25 +587,25 @@ header .avatar {
   position: relative;
 }
 @media screen and (min-width: 800px) {
-  .container.home article .info {
+  .container article .info {
     padding-left: 15px;
   }
 }
-.container.home article .info div {
+.container article .info div {
   float: left;
 }
-.container.home article .info .categories,
-.container.home article .info .tags {
+.container article .info .categories,
+.container article .info .tags {
   display: none;
 }
-.container.home article .info .comments {
+.container article .info .comments {
   float: right;
 }
-.container.home article .info .big-date {
+.container article .info .big-date {
   display: none;
 }
 @media screen and (min-width: 800px) {
-  .container.home article .info .big-date {
+  .container article .info .big-date {
     display: block;
     position: absolute;
     padding: 0;
@@ -621,52 +621,52 @@ header .avatar {
     text-align: center;
     overflow: hidden;
   }
-  .container.home article .info .big-date span {
+  .container article .info .big-date span {
     font-size: 30px;
     font-size: 3rem;
     line-height: 100px;
     font-weight: bold;
   }
-  .container.home article .info .big-date span.month {
+  .container article .info .big-date span.month {
     margin-left: 5px;
   }
 }
 @media screen and (min-width: 540px) {
-  .container.home article .info {
+  .container article .info {
     font-size: 14px;
     font-size: 1.4rem;
   }
-  .container.home article .info .categories,
-  .container.home article .info .tags {
+  .container article .info .categories,
+  .container article .info .tags {
     display: block;
   }
-  .container.home article .info .time-stamp {
+  .container article .info .time-stamp {
     float: right;
     color: #8e8e8e;
     padding-left: 0;
     border-left: 0;
     margin-right: 0;
   }
-  .container.home article .info .comments {
+  .container article .info .comments {
     float: left;
   }
-  .container.home article .info div {
+  .container article .info div {
     margin-right: 10px;
     margin-bottom: 10px;
     border-left: 1px solid #ebebeb;
     padding-left: 10px;
     color: #4ab3a5;
   }
-  .container.home article .info div:first-child {
+  .container article .info div:first-child {
     padding-left: 0;
     border-left: 0;
   }
-  .container.home article .info div ul,
-  .container.home article .info div li {
+  .container article .info div ul,
+  .container article .info div li {
     display: inline-block;
   }
 }
-.container.home article h2 {
+.container article h2 {
   color: #000;
   font-size: 20px;
   font-size: 2rem;
@@ -675,7 +675,7 @@ header .avatar {
   line-height: 1.2;
 }
 @media screen and (min-width: 540px) {
-  .container.home article h2 {
+  .container article h2 {
     text-align: left;
     font-size: 30px;
     font-size: 3rem;
@@ -684,17 +684,17 @@ header .avatar {
   }
 }
 @media screen and (min-width: 800px) {
-  .container.home article h2 {
+  .container article h2 {
     padding-left: 10px;
   }
 }
-.container.home article h2 a {
+.container article h2 a {
   color: #272727;
 }
-.container.home article h2 a:hover {
+.container article h2 a:hover {
   color: #4ab3a5;
 }
-.container.home article p {
+.container article p {
   font-size: 14px;
   font-size: 1.4rem;
   color: #757575;
@@ -705,49 +705,56 @@ header .avatar {
   margin-bottom: 1em;
 }
 @media screen and (min-width: 540px) {
-  .container.home article p {
+  .container article p {
     line-height: 1.6;
     font-size: 16px;
     font-size: 1.6rem;
   }
 }
 @media screen and (min-width: 800px) {
-  .container.home article p {
+  .container article p {
     padding-left: 10px;
   }
 }
-.container.home article .more {
+.container article .more,
+.container.post .share {
   float: right;
   margin: 10px 0;
   font-size: 12px;
   font-size: 1.2rem;
 }
 @media screen and (min-width: 540px) {
-  .container.home article .more {
+  .container article .more,
+  .container.post .share {
     font-size: 16px;
     font-size: 1.6rem;
     margin: 10px 0 40px 0;
     float: left;
   }
-  .container.home article .more a {
+  .container article .more a,
+  .container.post .share a {
     border-bottom: 1px solid #ebebeb;
     padding-bottom: 3px;
     color: #4ab3a5;
   }
-  .container.home article .more a:hover {
+  .container article .more a:hover,
+  .container.post .share a:hover {
     border-color: #4ab3a5;
   }
 }
 @media screen and (min-width: 800px) {
-  .container.home article .more {
+  .container article .more,
+  .container.post .share {
     margin-left: 10px;
   }
 }
-.container .load {
-  margin: 15px 0;
+.container .load,
+.container.post .control {
+  margin-top: 15px;
   padding: 0;
 }
-.container .load a {
+.container .load a,
+.container.post .control a {
   display: block;
   margin: 0 auto;
   width: 140px;
@@ -760,18 +767,66 @@ header .avatar {
   font-size: 1.6rem;
   border-radius: 6px;
 }
+.container .load a:hover,
+.container.post .control a:hover {
+  background: #43a194;
+}
 @media screen and (min-width: 540px) {
-  .container .load {
-    margin: 30px 0;
+  .container .load,
+  .container.post .control {
+    margin-top: 30px;
+  }
+}
+.container.post article {
+  margin-bottom: 0;
+}
+.container.post .share {
+  color: #8e8e8e;
+}
+.container.post .share a {
+  margin-left: 5px;
+}
+.container.post .control a {
+  width: 65px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 12px;
+  font-size: 1.2rem;
+}
+@media screen and (min-width: 540px) {
+  .container.post .control a {
+    font-size: 16px;
+    font-size: 1.6rem;
+    height: 50px;
+    line-height: 50px;
+    width: 100px;
+  }
+}
+.container.post .control .disabled a {
+  background: #8e8e8e;
+  cursor: not-allowed;
+}
+.container.post .control .disabled a:hover {
+  background: #818181;
+}
+.container.post .control .previous {
+  float: left;
+}
+.container.post .control .next {
+  float: right;
+}
+@media screen and (min-width: 800px) {
+  .container.post .control {
+    padding-left: 120px;
   }
 }
 /* footer */
 footer {
   text-align: center;
-  color: #8e8e8e;
+  color: #b7b7b7;
   font-size: 14px;
   font-size: 1.4rem;
-  margin-bottom: 20px;
+  padding: 20px 10px;
 }
 @media screen and (min-width: 540px) {
   footer {
