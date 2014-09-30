@@ -531,8 +531,8 @@ header .avatar {
 /* conatiner */
 .container {
   margin-top: 20px;
-  /* specific for post */
   /* for load button */
+  /* specific for post */
 }
 @media screen and (min-width: 540px) {
   .container {
@@ -574,10 +574,6 @@ header .avatar {
 @media screen and (min-width: 800px) {
   .container article {
     padding-left: 120px;
-    margin: 80px 0 80px 0;
-  }
-  .container article:first-of-type {
-    margin-top: 40px;
   }
 }
 .container article .info {
@@ -942,49 +938,6 @@ header .avatar {
     margin-left: 10px;
   }
 }
-.container.post article {
-  margin-bottom: 0;
-}
-@media screen and (min-width: 540px) {
-  .container.post article {
-    margin-top: 80px;
-  }
-}
-.container.post .share {
-  color: #8e8e8e;
-}
-.container.post .share a {
-  margin-left: 5px;
-}
-.container.post .control a {
-  width: 65px;
-  height: 40px;
-  line-height: 40px;
-  font-size: 12px;
-  font-size: 1.2rem;
-}
-@media screen and (min-width: 540px) {
-  .container.post .control a {
-    font-size: 16px;
-    font-size: 1.6rem;
-    height: 50px;
-    line-height: 50px;
-    width: 100px;
-  }
-}
-.container.post .control .disabled a {
-  background: #8e8e8e;
-  cursor: not-allowed;
-}
-.container.post .control .disabled a:hover {
-  background: #818181;
-}
-.container.post .control .previous {
-  float: left;
-}
-.container.post .control .next {
-  float: right;
-}
 .container .load,
 .container.post .control {
   margin-top: 15px;
@@ -1013,6 +966,41 @@ header .avatar {
   .container.post .control {
     margin-top: 30px;
   }
+}
+.container.post .share {
+  color: #8e8e8e;
+}
+.container.post .share a {
+  margin-left: 5px;
+}
+.container.post .control a {
+  width: 80px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 12px;
+  font-size: 1.2rem;
+}
+@media screen and (min-width: 540px) {
+  .container.post .control a {
+    font-size: 16px;
+    font-size: 1.6rem;
+    height: 50px;
+    line-height: 50px;
+    width: 100px;
+  }
+}
+.container.post .control .disabled a {
+  background: #8e8e8e;
+  cursor: not-allowed;
+}
+.container.post .control .disabled a:hover {
+  background: #818181;
+}
+.container.post .control .previous {
+  float: left;
+}
+.container.post .control .next {
+  float: right;
 }
 /* footer */
 footer {

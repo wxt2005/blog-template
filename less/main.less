@@ -541,11 +541,6 @@ header {
 
         @media @gte800 {
             padding-left: 120px;
-            margin: 80px 0 80px 0;
-
-            &:first-of-type {
-                margin-top: 40px;
-            }
         }
 
         .info {
@@ -823,16 +818,35 @@ header {
         }
     }
 
-    /* specific for post */
-    &.post {
-        article {
-            margin-bottom: 0;
+    /* for load button */
+    .load {
+        margin-top: 15px;
+        padding: 0;
 
-            @media @gte540 {
-                margin-top: 80px;
+        a {
+            display: block;
+            margin: 0 auto;
+            width: 140px;
+            height: 50px;
+            line-height: 50px;
+            color: #fff;
+            background: @main-green;
+            text-align: center;
+            .font-size(16);
+            border-radius: 6px;
+
+            &:hover {
+                background: darken(@main-green, 5%);
             }
         }
 
+        @media @gte540 {
+            margin-top: 30px;
+        }
+    }
+
+    /* specific for post */
+    &.post {
         .share {
             &:extend(.container article .more all);
             color: @text-lighter;
@@ -847,7 +861,7 @@ header {
             &:extend(.clearfix all);
 
             a {
-                width: 65px;
+                width: 80px;
                 height: 40px;
                 line-height: 40px;
                 .font-size(12);
@@ -875,33 +889,6 @@ header {
             .next {
                 float: right;
             }
-        }
-    }
-
-    /* for load button */
-    .load {
-        margin-top: 15px;
-        padding: 0;
-
-        a {
-            display: block;
-            margin: 0 auto;
-            width: 140px;
-            height: 50px;
-            line-height: 50px;
-            color: #fff;
-            background: @main-green;
-            text-align: center;
-            .font-size(16);
-            border-radius: 6px;
-
-            &:hover {
-                background: darken(@main-green, 5%);
-            }
-        }
-
-        @media @gte540 {
-            margin-top: 30px;
         }
     }
 }
