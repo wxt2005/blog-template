@@ -564,13 +564,6 @@ header .avatar {
   background: url("../images/dash-line.png") repeat-x;
   background-position: 0 100%;
   /* post format */
-  /* heading */
-  /* paragraph */
-  /* image */
-  /* block quote */
-  /* unordered list */
-  /* ordered list */
-  /* horizontal line */
   /* read more button */
 }
 @media screen and (min-width: 540px) {
@@ -675,118 +668,129 @@ header .avatar {
     display: inline-block;
   }
 }
-.container article h1,
-.container article h2,
-.container article h3,
-.container article h4,
-.container article h5,
-.container article h6 {
+.container article .content {
+  /* mixins */
+  /* heading */
+  /* paragraph */
+  /* image */
+  /* block quote */
+  /* unordered list */
+  /* ordered list */
+  /* horizontal line */
+  /* inline elements */
+}
+.container article .content h1,
+.container article .content h2,
+.container article .content h3,
+.container article .content h4,
+.container article .content h5,
+.container article .content h6 {
   text-align: left;
   color: #272727;
   margin: 0.5em 0;
 }
 @media screen and (min-width: 800px) {
-  .container article h1,
-  .container article h2,
-  .container article h3,
-  .container article h4,
-  .container article h5,
-  .container article h6 {
+  .container article .content h1,
+  .container article .content h2,
+  .container article .content h3,
+  .container article .content h4,
+  .container article .content h5,
+  .container article .content h6 {
     margin-left: 10px;
   }
 }
-.container article h1 a,
-.container article h2 a,
-.container article h3 a,
-.container article h4 a,
-.container article h5 a,
-.container article h6 a {
+.container article .content h1 a,
+.container article .content h2 a,
+.container article .content h3 a,
+.container article .content h4 a,
+.container article .content h5 a,
+.container article .content h6 a {
   color: #272727;
 }
-.container article h1 a:hover,
-.container article h2 a:hover,
-.container article h3 a:hover,
-.container article h4 a:hover,
-.container article h5 a:hover,
-.container article h6 a:hover {
+.container article .content h1 a:hover,
+.container article .content h2 a:hover,
+.container article .content h3 a:hover,
+.container article .content h4 a:hover,
+.container article .content h5 a:hover,
+.container article .content h6 a:hover {
   color: #4ab3a5;
 }
-.container article h1 {
+.container article .content h1 {
   font-weight: bold;
   font-size: 26px;
   font-size: 2.6rem;
   line-height: 26px;
 }
 @media screen and (min-width: 540px) {
-  .container article h1 {
+  .container article .content h1 {
     font-size: 30px;
     font-size: 3rem;
     line-height: 33px;
   }
 }
-.container article h2 {
+.container article .content h2 {
   font-weight: bold;
   font-size: 24px;
   font-size: 2.4rem;
   line-height: 24px;
 }
 @media screen and (min-width: 540px) {
-  .container article h2 {
+  .container article .content h2 {
     font-size: 28px;
     font-size: 2.8rem;
     line-height: 30.8px;
   }
 }
-.container article h3 {
+.container article .content h3 {
   font-weight: bold;
   font-size: 21px;
   font-size: 2.1rem;
   line-height: 21px;
 }
 @media screen and (min-width: 540px) {
-  .container article h3 {
+  .container article .content h3 {
     font-size: 24px;
     font-size: 2.4rem;
     line-height: 26.4px;
   }
 }
-.container article h4 {
+.container article .content h4 {
   font-size: 15px;
   font-size: 1.5rem;
   line-height: 15px;
 }
 @media screen and (min-width: 540px) {
-  .container article h4 {
+  .container article .content h4 {
     font-size: 18px;
     font-size: 1.8rem;
     line-height: 19.8px;
   }
 }
-.container article h5 {
+.container article .content h5 {
   font-size: 12px;
   font-size: 1.2rem;
   line-height: 12px;
 }
 @media screen and (min-width: 540px) {
-  .container article h5 {
+  .container article .content h5 {
     font-size: 14px;
     font-size: 1.4rem;
     line-height: 15.4px;
   }
 }
-.container article h6 {
+.container article .content h6 {
   font-size: 10px;
   font-size: 1rem;
   line-height: 10px;
 }
 @media screen and (min-width: 540px) {
-  .container article h6 {
+  .container article .content h6 {
     font-size: 12px;
     font-size: 1.2rem;
     line-height: 13.2px;
   }
 }
-.container article p {
+.container article .content p {
   color: #757575;
   word-wrap: break-word;
   word-break: break-all;
@@ -797,48 +801,47 @@ header .avatar {
   line-height: 19px;
 }
 @media screen and (min-width: 540px) {
-  .container article p {
+  .container article .content p {
     font-size: 16px;
     font-size: 1.6rem;
     line-height: 24px;
   }
 }
 @media screen and (min-width: 800px) {
-  .container article p {
+  .container article .content p {
     margin-left: 10px;
   }
 }
-.container article p img {
+.container article .content p img {
   max-width: 100%;
   height: auto;
   border: 1px solid #b7b7b7;
   padding: 1px;
   box-sizing: border-box;
 }
-.container article blockquote {
+.container article .content blockquote {
   padding-left: 1em;
   border-left: 5px solid #b7b7b7;
 }
 @media screen and (min-width: 800px) {
-  .container article blockquote {
+  .container article .content blockquote {
     margin-left: 10px;
   }
 }
-.container article blockquote p {
+.container article .content blockquote p {
   margin-left: 0;
   font-size: 15px;
   font-size: 1.5rem;
   line-height: 20px;
 }
 @media screen and (min-width: 540px) {
-  .container article blockquote p {
+  .container article .content blockquote p {
     font-size: 18px;
     font-size: 1.8rem;
     line-height: 25.2px;
   }
 }
-.container article ul,
-.container article ol {
+.container article .content ul {
   margin-bottom: 0.8em;
   font-size: 14px;
   font-size: 1.4rem;
@@ -848,35 +851,43 @@ header .avatar {
   list-style-position: inside;
 }
 @media screen and (min-width: 800px) {
-  .container article ul,
-  .container article ol {
+  .container article .content ul {
     margin-left: 10px;
   }
 }
 @media screen and (min-width: 540px) {
-  .container article ul,
-  .container article ol {
+  .container article .content ul {
     font-size: 16px;
     font-size: 1.6rem;
     line-height: 24px;
   }
 }
-.container article ul li p,
-.container article ol li p {
+.container article .content ul li p {
   margin-left: 0;
 }
-.container article ol {
+.container article .content ol {
   list-style-type: decimal;
 }
-.container article hr {
+.container article .content hr {
   border: none;
   border-bottom: 1px solid #d1d1d1;
   margin: 1em 0;
 }
 @media screen and (min-width: 800px) {
-  .container article hr {
+  .container article .content hr {
     margin-left: 10px;
   }
+}
+.container article .content p {
+  /* links */
+}
+.container article .content p a {
+  color: #4ab3a5;
+  border-bottom: 1px dashed #b7b7b7;
+  margin: 0 0.1em;
+}
+.container article .content p a:hover {
+  color: #3b8f84;
 }
 .container article .more,
 .container.post .share {
