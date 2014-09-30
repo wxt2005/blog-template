@@ -536,17 +536,17 @@ header .avatar {
 }
 @media screen and (min-width: 540px) {
   .container {
-    margin-top: 30px;
+    margin-top: 25px;
   }
 }
 @media screen and (min-width: 800px) {
   .container {
-    margin-top: 50px;
+    margin-top: 40px;
   }
 }
 .container h1.blog-title {
-  font-size: 36px;
-  font-size: 3.6rem;
+  font-size: 28px;
+  font-size: 2.8rem;
   text-align: center;
   color: #8e8e8e;
   padding: 0 5px;
