@@ -841,7 +841,8 @@ header .avatar {
     line-height: 25.2px;
   }
 }
-.container article .content ul {
+.container article .content ul,
+.container article .content ol {
   margin-bottom: 0.8em;
   font-size: 14px;
   font-size: 1.4rem;
@@ -851,18 +852,21 @@ header .avatar {
   list-style-position: inside;
 }
 @media screen and (min-width: 800px) {
-  .container article .content ul {
+  .container article .content ul,
+  .container article .content ol {
     margin-left: 10px;
   }
 }
 @media screen and (min-width: 540px) {
-  .container article .content ul {
+  .container article .content ul,
+  .container article .content ol {
     font-size: 16px;
     font-size: 1.6rem;
     line-height: 24px;
   }
 }
-.container article .content ul li p {
+.container article .content ul li p,
+.container article .content ol li p {
   margin-left: 0;
 }
 .container article .content ol {
@@ -880,6 +884,9 @@ header .avatar {
 }
 .container article .content p {
   /* links */
+  /* em */
+  /* strong */
+  /* code */
 }
 .container article .content p a {
   color: #4ab3a5;
@@ -888,6 +895,21 @@ header .avatar {
 }
 .container article .content p a:hover {
   color: #3b8f84;
+}
+.container article .content p em {
+  font-style: italic;
+}
+.container article .content p strong {
+  font-weight: bold;
+}
+.container article .content p code {
+  border: 1px solid #b7b7b7;
+  margin: 0 0.2em;
+  padding: 0 0.3em;
+  font-size: 14px;
+  font-size: 1.4rem;
+  background: #f7f7f7;
+  color: #d14;
 }
 .container article .more,
 .container.post .share {

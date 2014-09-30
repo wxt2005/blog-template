@@ -747,7 +747,7 @@ header {
 
             /* ordered list */
             ol {
-                &:extend(.container article ul all);
+                &:extend(.container article .content ul all);
                 list-style-type: decimal; 
             }
 
@@ -770,6 +770,26 @@ header {
                     &:hover {
                         color: darken(@main-green, 10%)
                     }
+                }
+
+                /* em */
+                em {
+                    font-style: italic;
+                }
+
+                /* strong */
+                strong {
+                    font-weight: bold;
+                }
+
+                /* code */
+                code {
+                    border: 1px solid @text-lightest;
+                    margin: 0 0.2em;
+                    padding: 0 0.3em;
+                    .font-size(14);
+                    background: lighten(@text-lightest, 25%);
+                    color: #d14;
                 }
             }
         }
