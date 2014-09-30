@@ -531,8 +531,8 @@ header .avatar {
 /* conatiner */
 .container {
   margin-top: 20px;
-  /* for load button */
   /* specific for post */
+  /* for load button */
 }
 @media screen and (min-width: 540px) {
   .container {
@@ -544,7 +544,7 @@ header .avatar {
     margin-top: 50px;
   }
 }
-.container h1 {
+.container h1.blog-title {
   font-size: 36px;
   font-size: 3.6rem;
   text-align: center;
@@ -553,7 +553,7 @@ header .avatar {
   font-weight: bold;
 }
 @media screen and (min-width: 540px) {
-  .container h1 {
+  .container h1.blog-title {
     padding: 0 5px 20px 5px;
     background: url("../images/head-line.png") no-repeat;
     background-position: 50% 100%;
@@ -563,6 +563,13 @@ header .avatar {
   margin: 20px 0 20px 0;
   background: url("../images/dash-line.png") repeat-x;
   background-position: 0 100%;
+  /* post format */
+  /* heading */
+  /* paragraph */
+  /* image */
+  /* block quote */
+  /* unordered list */
+  /* read more button */
 }
 @media screen and (min-width: 540px) {
   .container article {
@@ -666,54 +673,166 @@ header .avatar {
     display: inline-block;
   }
 }
-.container article h2 {
-  color: #000;
-  font-size: 20px;
-  font-size: 2rem;
-  text-align: center;
-  margin: 15px 0;
-  line-height: 1.2;
-}
-@media screen and (min-width: 540px) {
-  .container article h2 {
-    text-align: left;
-    font-size: 30px;
-    font-size: 3rem;
-    margin-top: 25px;
-    margin-bottom: 20px;
-  }
+.container article h1,
+.container article h2,
+.container article h3,
+.container article h4,
+.container article h5,
+.container article h6 {
+  text-align: left;
+  color: #272727;
+  margin: 0.5em 0;
 }
 @media screen and (min-width: 800px) {
-  .container article h2 {
-    padding-left: 10px;
+  .container article h1,
+  .container article h2,
+  .container article h3,
+  .container article h4,
+  .container article h5,
+  .container article h6 {
+    margin-left: 10px;
   }
 }
-.container article h2 a {
+.container article h1 a,
+.container article h2 a,
+.container article h3 a,
+.container article h4 a,
+.container article h5 a,
+.container article h6 a {
   color: #272727;
 }
-.container article h2 a:hover {
+.container article h1 a:hover,
+.container article h2 a:hover,
+.container article h3 a:hover,
+.container article h4 a:hover,
+.container article h5 a:hover,
+.container article h6 a:hover {
   color: #4ab3a5;
 }
+.container article h1 {
+  font-weight: bold;
+  font-size: 26px;
+  font-size: 2.6rem;
+  line-height: 26px;
+}
+@media screen and (min-width: 540px) {
+  .container article h1 {
+    font-size: 30px;
+    font-size: 3rem;
+    line-height: 33px;
+  }
+}
+.container article h2 {
+  font-weight: bold;
+  font-size: 24px;
+  font-size: 2.4rem;
+  line-height: 24px;
+}
+@media screen and (min-width: 540px) {
+  .container article h2 {
+    font-size: 28px;
+    font-size: 2.8rem;
+    line-height: 30.8px;
+  }
+}
+.container article h3 {
+  font-weight: bold;
+  font-size: 21px;
+  font-size: 2.1rem;
+  line-height: 21px;
+}
+@media screen and (min-width: 540px) {
+  .container article h3 {
+    font-size: 24px;
+    font-size: 2.4rem;
+    line-height: 26.4px;
+  }
+}
+.container article h4 {
+  font-size: 15px;
+  font-size: 1.5rem;
+  line-height: 15px;
+}
+@media screen and (min-width: 540px) {
+  .container article h4 {
+    font-size: 18px;
+    font-size: 1.8rem;
+    line-height: 19.8px;
+  }
+}
+.container article h5 {
+  font-size: 12px;
+  font-size: 1.2rem;
+  line-height: 12px;
+}
+@media screen and (min-width: 540px) {
+  .container article h5 {
+    font-size: 14px;
+    font-size: 1.4rem;
+    line-height: 15.4px;
+  }
+}
+.container article h6 {
+  font-size: 10px;
+  font-size: 1rem;
+  line-height: 10px;
+}
+@media screen and (min-width: 540px) {
+  .container article h6 {
+    font-size: 12px;
+    font-size: 1.2rem;
+    line-height: 13.2px;
+  }
+}
 .container article p {
-  font-size: 14px;
-  font-size: 1.4rem;
   color: #757575;
-  line-height: 1.4;
-  word-warp: break-word;
+  word-wrap: break-word;
   word-break: break-all;
   text-align: justify;
-  margin-bottom: 1em;
+  margin-bottom: 0.8em;
+  font-size: 14px;
+  font-size: 1.4rem;
+  line-height: 19px;
 }
 @media screen and (min-width: 540px) {
   .container article p {
-    line-height: 1.6;
     font-size: 16px;
     font-size: 1.6rem;
+    line-height: 24px;
   }
 }
 @media screen and (min-width: 800px) {
   .container article p {
-    padding-left: 10px;
+    margin-left: 10px;
+  }
+}
+.container article p img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #b7b7b7;
+  padding: 1px;
+  box-sizing: border-box;
+}
+.container article blockquote {
+  padding-left: 1em;
+  border-left: 5px solid #b7b7b7;
+}
+@media screen and (min-width: 800px) {
+  .container article blockquote {
+    margin-left: 10px;
+  }
+}
+.container article blockquote p {
+  margin-left: 0;
+  font-size: 15px;
+  font-size: 1.5rem;
+  line-height: 20px;
+}
+@media screen and (min-width: 540px) {
+  .container article blockquote p {
+    font-size: 18px;
+    font-size: 1.8rem;
+    line-height: 25.2px;
   }
 }
 .container article .more,
@@ -748,37 +867,13 @@ header .avatar {
     margin-left: 10px;
   }
 }
-.container .load,
-.container.post .control {
-  margin-top: 15px;
-  padding: 0;
-}
-.container .load a,
-.container.post .control a {
-  display: block;
-  margin: 0 auto;
-  width: 140px;
-  height: 50px;
-  line-height: 50px;
-  color: #fff;
-  background: #4ab3a5;
-  text-align: center;
-  font-size: 16px;
-  font-size: 1.6rem;
-  border-radius: 6px;
-}
-.container .load a:hover,
-.container.post .control a:hover {
-  background: #43a194;
-}
-@media screen and (min-width: 540px) {
-  .container .load,
-  .container.post .control {
-    margin-top: 30px;
-  }
-}
 .container.post article {
   margin-bottom: 0;
+}
+@media screen and (min-width: 540px) {
+  .container.post article {
+    margin-top: 80px;
+  }
 }
 .container.post .share {
   color: #8e8e8e;
@@ -818,6 +913,35 @@ header .avatar {
 @media screen and (min-width: 800px) {
   .container.post .control {
     padding-left: 120px;
+  }
+}
+.container .load,
+.container.post .control {
+  margin-top: 15px;
+  padding: 0;
+}
+.container .load a,
+.container.post .control a {
+  display: block;
+  margin: 0 auto;
+  width: 140px;
+  height: 50px;
+  line-height: 50px;
+  color: #fff;
+  background: #4ab3a5;
+  text-align: center;
+  font-size: 16px;
+  font-size: 1.6rem;
+  border-radius: 6px;
+}
+.container .load a:hover,
+.container.post .control a:hover {
+  background: #43a194;
+}
+@media screen and (min-width: 540px) {
+  .container .load,
+  .container.post .control {
+    margin-top: 30px;
   }
 }
 /* footer */

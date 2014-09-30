@@ -514,7 +514,7 @@ header {
         margin-top: 50px;
     }
 
-    h1 {
+    h1.blog-title {
         .font-size(36);
         text-align: center;
         color: @text-lighter;
@@ -642,52 +642,98 @@ header {
 
         }
 
-        h2 {
-            color: #000;
-            .font-size(20);
-            text-align: center;
-            margin: 15px 0;
-            line-height: 1.2;
+        /* post format */
 
+        .calculatedSize(@sizeBase; @lineBase) {
+            .font-size(floor(@sizeBase * 0.875));
+            line-height: unit(floor(@sizeBase * @lineBase * 0.8), px);
             @media @gte540 {
-                text-align: left;
-                .font-size(30);
-                margin-top: 25px;
-                margin-bottom: 20px;
+                .font-size(@sizeBase);
+                line-height: unit(@sizeBase * @lineBase, px);
             }
-
+        }
+        .bigMargin() {
             @media @gte800 {
-                padding-left: 10px;
+                margin-left: 10px;
             }
+        }
+
+        /* heading */
+        h1, h2, h3, h4, h5, h6 {
+            text-align: left;
+            color: @text-dark;
+            color: @text-dark;
+            margin: 0.5em 0;
+            .bigMargin;
 
             a {
                 color: @text-dark;
-
                 &:hover {
                     color: @main-green;
                 }
             }
         }
 
+
+        h1 {
+            font-weight: bold;
+            .calculatedSize(30;1.1);
+        }
+        h2 {
+            font-weight: bold;
+            .calculatedSize(28;1.1);
+        }
+        h3 {
+            font-weight: bold;
+            .calculatedSize(24;1.1);
+        }
+        h4 {
+            .calculatedSize(18;1.1);
+        }
+        h5 {
+            .calculatedSize(14;1.1);
+        }
+        h6 {
+            .calculatedSize(12;1.1);
+        }
+
+
+        /* paragraph */
         p {
-            .font-size(14);
             color: darken(@text-lighter, 10%);
-            line-height: 1.4;
-            word-warp: break-word;
+            word-wrap: break-word;
             word-break: break-all;
             text-align: justify;
-            margin-bottom: 1em;
+            margin-bottom: 0.8em;
+            .calculatedSize(16;1.5);
+            .bigMargin;
+        }
 
-            @media @gte540 {
-                line-height: 1.6;
-                .font-size(16);
-            }
+        /* image */
+        p img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid @text-lightest;
+            padding: 1px;
+            box-sizing: border-box;
+        }
 
-            @media @gte800 {
-                padding-left: 10px;
+        /* block quote */
+        blockquote {
+            padding-left: 1em;
+            border-left: 5px solid @text-lightest;
+            .bigMargin;
+
+            p {
+                margin-left: 0;
+                .calculatedSize(18;1.4);
             }
         }
 
+        /* unordered list */
+        
+
+        /* read more button */
         .more {
             float: right;
             margin: 10px 0;
@@ -709,36 +755,7 @@ header {
                 }
             }
 
-            @media @gte800 {
-                margin-left: 10px;
-            }
-        }
-    }
-
-    /* for load button */
-    .load {
-        margin-top: 15px;
-        padding: 0;
-
-        a {
-            display: block;
-            margin: 0 auto;
-            width: 140px;
-            height: 50px;
-            line-height: 50px;
-            color: #fff;
-            background: @main-green;
-            text-align: center;
-            .font-size(16);
-            border-radius: 6px;
-
-            &:hover {
-                background: darken(@main-green, 5%);
-            }
-        }
-
-        @media @gte540 {
-            margin-top: 30px;
+            .bigMargin;
         }
     }
 
@@ -746,6 +763,13 @@ header {
     &.post {
         article {
             margin-bottom: 0;
+
+            @media @gte540 {
+                margin-top: 80px;
+            }
+
+            
+
         }
 
         .share {
@@ -794,6 +818,33 @@ header {
             @media @gte800 {
                 padding-left: 120px;
             }
+        }
+    }
+
+    /* for load button */
+    .load {
+        margin-top: 15px;
+        padding: 0;
+
+        a {
+            display: block;
+            margin: 0 auto;
+            width: 140px;
+            height: 50px;
+            line-height: 50px;
+            color: #fff;
+            background: @main-green;
+            text-align: center;
+            .font-size(16);
+            border-radius: 6px;
+
+            &:hover {
+                background: darken(@main-green, 5%);
+            }
+        }
+
+        @media @gte540 {
+            margin-top: 30px;
         }
     }
 }
