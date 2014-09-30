@@ -906,10 +906,9 @@ header .avatar {
   border: 1px solid #b7b7b7;
   margin: 0 0.2em;
   padding: 0 0.3em;
-  font-size: 14px;
-  font-size: 1.4rem;
   background: #f7f7f7;
   color: #d14;
+  word-break: normal;
 }
 .container article .more,
 .container.post .share {
@@ -985,11 +984,6 @@ header .avatar {
 }
 .container.post .control .next {
   float: right;
-}
-@media screen and (min-width: 800px) {
-  .container.post .control {
-    padding-left: 120px;
-  }
 }
 .container .load,
 .container.post .control {

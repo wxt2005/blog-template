@@ -787,9 +787,9 @@ header {
                     border: 1px solid @text-lightest;
                     margin: 0 0.2em;
                     padding: 0 0.3em;
-                    .font-size(14);
                     background: lighten(@text-lightest, 25%);
                     color: #d14;
+                    word-break: normal; 
                 }
             }
         }
@@ -874,10 +874,6 @@ header {
             }
             .next {
                 float: right;
-            }
-
-            @media @gte800 {
-                padding-left: 120px;
             }
         }
     }
