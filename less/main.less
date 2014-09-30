@@ -731,7 +731,32 @@ header {
         }
 
         /* unordered list */
-        
+        ul {
+            .bigMargin;
+            margin-bottom: 0.8em;
+            .calculatedSize(16;1.5);
+            color: darken(@text-lighter, 10%);
+            list-style-type: disc;
+            list-style-position: inside;
+
+            li p {
+                margin-left: 0;
+            }
+        }  
+
+        /* ordered list */
+        ol {
+            &:extend(.container article ul all);
+            list-style-type: decimal; 
+        }
+
+        /* horizontal line */
+        hr {
+            .bigMargin;
+            border: none;
+            border-bottom: 1px solid lighten(@text-lightest, 10%);
+            margin: 1em 0;
+        }
 
         /* read more button */
         .more {

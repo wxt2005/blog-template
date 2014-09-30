@@ -569,6 +569,8 @@ header .avatar {
   /* image */
   /* block quote */
   /* unordered list */
+  /* ordered list */
+  /* horizontal line */
   /* read more button */
 }
 @media screen and (min-width: 540px) {
@@ -833,6 +835,47 @@ header .avatar {
     font-size: 18px;
     font-size: 1.8rem;
     line-height: 25.2px;
+  }
+}
+.container article ul,
+.container article ol {
+  margin-bottom: 0.8em;
+  font-size: 14px;
+  font-size: 1.4rem;
+  line-height: 19px;
+  color: #757575;
+  list-style-type: disc;
+  list-style-position: inside;
+}
+@media screen and (min-width: 800px) {
+  .container article ul,
+  .container article ol {
+    margin-left: 10px;
+  }
+}
+@media screen and (min-width: 540px) {
+  .container article ul,
+  .container article ol {
+    font-size: 16px;
+    font-size: 1.6rem;
+    line-height: 24px;
+  }
+}
+.container article ul li p,
+.container article ol li p {
+  margin-left: 0;
+}
+.container article ol {
+  list-style-type: decimal;
+}
+.container article hr {
+  border: none;
+  border-bottom: 1px solid #d1d1d1;
+  margin: 1em 0;
+}
+@media screen and (min-width: 800px) {
+  .container article hr {
+    margin-left: 10px;
   }
 }
 .container article .more,
