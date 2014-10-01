@@ -674,6 +674,12 @@ header .avatar {
   /* ordered list */
   /* horizontal line */
   /* inline elements */
+  /* code block */
+}
+@media screen and (min-width: 800px) {
+  .container article .content {
+    margin-left: 10px;
+  }
 }
 .container article .content h1,
 .container article .content h2,
@@ -684,16 +690,6 @@ header .avatar {
   text-align: left;
   color: #272727;
   margin: 0.5em 0;
-}
-@media screen and (min-width: 800px) {
-  .container article .content h1,
-  .container article .content h2,
-  .container article .content h3,
-  .container article .content h4,
-  .container article .content h5,
-  .container article .content h6 {
-    margin-left: 10px;
-  }
 }
 .container article .content h1 a,
 .container article .content h2 a,
@@ -803,11 +799,6 @@ header .avatar {
     line-height: 24px;
   }
 }
-@media screen and (min-width: 800px) {
-  .container article .content p {
-    margin-left: 10px;
-  }
-}
 .container article .content p img {
   max-width: 100%;
   height: auto;
@@ -818,11 +809,6 @@ header .avatar {
 .container article .content blockquote {
   padding-left: 1em;
   border-left: 5px solid #b7b7b7;
-}
-@media screen and (min-width: 800px) {
-  .container article .content blockquote {
-    margin-left: 10px;
-  }
 }
 .container article .content blockquote p {
   margin-left: 0;
@@ -847,12 +833,6 @@ header .avatar {
   list-style-type: disc;
   list-style-position: inside;
 }
-@media screen and (min-width: 800px) {
-  .container article .content ul,
-  .container article .content ol {
-    margin-left: 10px;
-  }
-}
 @media screen and (min-width: 540px) {
   .container article .content ul,
   .container article .content ol {
@@ -872,11 +852,6 @@ header .avatar {
   border: none;
   border-bottom: 1px solid #d1d1d1;
   margin: 1em 0;
-}
-@media screen and (min-width: 800px) {
-  .container article .content hr {
-    margin-left: 10px;
-  }
 }
 .container article .content p {
   /* links */
@@ -901,10 +876,25 @@ header .avatar {
 .container article .content p code {
   border: 1px solid #b7b7b7;
   margin: 0 0.2em;
-  padding: 0 0.3em;
   background: #f7f7f7;
-  color: #d14;
   word-break: normal;
+}
+.container article .content pre {
+  background: #f7f7f7;
+  border: 1px solid #b7b7b7;
+  max-height: 30em;
+}
+.container article .content pre code {
+  font-size: 14px;
+  font-size: 1.4rem;
+  line-height: 19px;
+}
+@media screen and (min-width: 540px) {
+  .container article .content pre code {
+    font-size: 16px;
+    font-size: 1.6rem;
+    line-height: 24px;
+  }
 }
 .container article .more,
 .container.post .share {
@@ -930,12 +920,6 @@ header .avatar {
   .container article .more a:hover,
   .container.post .share a:hover {
     border-color: #4ab3a5;
-  }
-}
-@media screen and (min-width: 800px) {
-  .container article .more,
-  .container.post .share {
-    margin-left: 10px;
   }
 }
 .container .load,

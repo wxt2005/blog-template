@@ -46,4 +46,5 @@ $(function() {
     $(document).click(function(event) {
         $dropMenus.removeClass('active');
     });
+
 });

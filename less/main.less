@@ -653,6 +653,9 @@ header {
                     margin-left: 10px;
                 }
             }
+            @media @gte800 {
+                margin-left: 10px;
+            }
 
             /* heading */
             h1, h2, h3, h4, h5, h6 {
@@ -660,7 +663,6 @@ header {
                 color: @text-dark;
                 color: @text-dark;
                 margin: 0.5em 0;
-                .bigMargin;
 
                 a {
                     color: @text-dark;
@@ -702,7 +704,6 @@ header {
                 text-align: justify;
                 margin-bottom: 0.8em;
                 .calculatedSize(16;1.5);
-                .bigMargin;
             }
 
             /* image */
@@ -718,7 +719,6 @@ header {
             blockquote {
                 padding-left: 1em;
                 border-left: 5px solid @text-lightest;
-                .bigMargin;
 
                 p {
                     margin-left: 0;
@@ -728,7 +728,6 @@ header {
 
             /* unordered list */
             ul {
-                .bigMargin;
                 margin-bottom: 0.8em;
                 .calculatedSize(16;1.5);
                 color: darken(@text-lighter, 10%);
@@ -748,7 +747,6 @@ header {
 
             /* horizontal line */
             hr {
-                .bigMargin;
                 border: none;
                 border-bottom: 1px solid lighten(@text-lightest, 10%);
                 margin: 1em 0;
@@ -781,10 +779,18 @@ header {
                 code {
                     border: 1px solid @text-lightest;
                     margin: 0 0.2em;
-                    padding: 0 0.3em;
                     background: lighten(@text-lightest, 25%);
-                    color: #d14;
                     word-break: normal; 
+                }
+            }
+
+            /* code block */
+            pre {
+                background: lighten(@text-lightest, 25%);
+                border: 1px solid @text-lightest;
+                max-height: 30em;
+                code {
+                    .calculatedSize(16;1.5);
                 }
             }
         }
@@ -810,11 +816,6 @@ header {
                     }
                 }
             }
-
-            @media @gte800 {
-                margin-left: 10px;
-            }
-
         }
     }
 
