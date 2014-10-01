@@ -883,6 +883,7 @@ header .avatar {
   background: #f7f7f7;
   border: 1px solid #b7b7b7;
   max-height: 30em;
+  margin: 0 0 0.8em 0;
 }
 .container article .content pre code {
   font-size: 14px;
@@ -953,6 +954,11 @@ header .avatar {
 }
 .container.post .share {
   color: #8e8e8e;
+}
+@media screen and (min-width: 800px) {
+  .container.post .share {
+    margin-left: 10px;
+  }
 }
 .container.post .share a {
   margin-left: 5px;

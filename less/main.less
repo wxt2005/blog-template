@@ -789,6 +789,7 @@ header {
                 background: lighten(@text-lightest, 25%);
                 border: 1px solid @text-lightest;
                 max-height: 30em;
+                margin: 0 0 0.8em 0;
                 code {
                     .calculatedSize(16;1.5);
                 }
@@ -851,6 +852,9 @@ header {
         .share {
             &:extend(.container article .more all);
             color: @text-lighter;
+            @media @gte800 {
+                margin-left: 10px;
+            }
 
             a {
                 margin-left: 5px;
