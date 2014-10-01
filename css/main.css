@@ -787,7 +787,7 @@ header .avatar {
   word-wrap: break-word;
   word-break: break-all;
   text-align: justify;
-  margin-bottom: 0.8em;
+  margin-bottom: 15px;
   font-size: 14px;
   font-size: 1.4rem;
   line-height: 19px;
@@ -825,7 +825,7 @@ header .avatar {
 }
 .container article .content ul,
 .container article .content ol {
-  margin-bottom: 0.8em;
+  margin-bottom: 15px;
   font-size: 14px;
   font-size: 1.4rem;
   line-height: 19px;
@@ -851,7 +851,7 @@ header .avatar {
 .container article .content hr {
   border: none;
   border-bottom: 1px solid #d1d1d1;
-  margin: 1em 0;
+  margin: 0 0 15px 0;
 }
 .container article .content p {
   /* links */
@@ -883,7 +883,7 @@ header .avatar {
   background: #f7f7f7;
   border: 1px solid #b7b7b7;
   max-height: 30em;
-  margin: 0 0 0.8em 0;
+  margin: 0 0 15px 0;
 }
 .container article .content pre code {
   font-size: 14px;
@@ -899,7 +899,7 @@ header .avatar {
 }
 .container article .more,
 .container.post .share {
-  float: right;
+  float: left;
   margin: 10px 0;
   font-size: 12px;
   font-size: 1.2rem;
@@ -909,8 +909,7 @@ header .avatar {
   .container.post .share {
     font-size: 16px;
     font-size: 1.6rem;
-    margin: 10px 0 40px 0;
-    float: left;
+    margin: 20px 0 40px 0;
   }
   .container article .more a,
   .container.post .share a {

@@ -702,7 +702,7 @@ header {
                 word-wrap: break-word;
                 word-break: break-all;
                 text-align: justify;
-                margin-bottom: 0.8em;
+                margin-bottom: 15px;
                 .calculatedSize(16;1.5);
             }
 
@@ -728,7 +728,7 @@ header {
 
             /* unordered list */
             ul {
-                margin-bottom: 0.8em;
+                margin-bottom: 15px;
                 .calculatedSize(16;1.5);
                 color: darken(@text-lighter, 10%);
                 list-style-type: disc;
@@ -749,7 +749,7 @@ header {
             hr {
                 border: none;
                 border-bottom: 1px solid lighten(@text-lightest, 10%);
-                margin: 1em 0;
+                margin: 0 0 15px 0;
             }
 
             /* inline elements */
@@ -789,7 +789,7 @@ header {
                 background: lighten(@text-lightest, 25%);
                 border: 1px solid @text-lightest;
                 max-height: 30em;
-                margin: 0 0 0.8em 0;
+                margin: 0 0 15px 0;
                 code {
                     .calculatedSize(16;1.5);
                 }
@@ -798,14 +798,13 @@ header {
 
         /* read more button */
         .more {
-            float: right;
+            float: left;
             margin: 10px 0;
             .font-size(12); 
 
             @media @gte540 {
                 .font-size(16); 
-                margin: 10px 0 40px 0;
-                float: left;
+                margin: 20px 0 40px 0;
 
                 a {
                     border-bottom: 1px solid @border-gray;

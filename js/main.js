@@ -44,7 +44,9 @@ $(function() {
 
     // 点击页面任意位置隐藏导航菜单
     $(document).click(function(event) {
-        $dropMenus.removeClass('active');
+        if ($dropMenus.has($(event.target)).length <= 0) {
+            $dropMenus.removeClass('active');
+        }
     });
 
 });
