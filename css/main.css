@@ -132,14 +132,14 @@ table {
 header,
 .container article,
 .container article .info,
-.container.post .control {
+.container .control {
   zoom: 1;
 }
 .clearfix:after,
 header:after,
 .container article:after,
 .container article .info:after,
-.container.post .control:after {
+.container .control:after {
   content: ".";
   height: 0;
   width: 0;
@@ -531,8 +531,8 @@ header .avatar {
 /* conatiner */
 .container {
   margin-top: 20px;
-  /* for load button */
-  /* specific for post */
+  /* for control button */
+  /* for share links */
 }
 @media screen and (min-width: 540px) {
   .container {
@@ -898,7 +898,7 @@ header .avatar {
   }
 }
 .container article .more,
-.container.post .share {
+.container .share {
   float: left;
   margin: 10px 0;
   font-size: 12px;
@@ -906,71 +906,44 @@ header .avatar {
 }
 @media screen and (min-width: 540px) {
   .container article .more,
-  .container.post .share {
+  .container .share {
     font-size: 16px;
     font-size: 1.6rem;
     margin: 20px 0 40px 0;
   }
   .container article .more a,
-  .container.post .share a {
+  .container .share a {
     border-bottom: 1px solid #ebebeb;
     padding-bottom: 3px;
     color: #4ab3a5;
   }
   .container article .more a:hover,
-  .container.post .share a:hover {
+  .container .share a:hover {
     border-color: #4ab3a5;
   }
 }
-.container .load,
-.container.post .control {
+.container .control {
   margin-top: 15px;
   padding: 0;
 }
-.container .load a,
-.container.post .control a {
+.container .control a {
   display: block;
   margin: 0 auto;
-  width: 140px;
-  height: 50px;
-  line-height: 50px;
-  color: #fff;
-  background: #4ab3a5;
-  text-align: center;
-  font-size: 16px;
-  font-size: 1.6rem;
-  border-radius: 6px;
-}
-.container .load a:hover,
-.container.post .control a:hover {
-  background: #43a194;
-}
-@media screen and (min-width: 540px) {
-  .container .load,
-  .container.post .control {
-    margin-top: 30px;
-  }
-}
-.container.post .share {
-  color: #8e8e8e;
-}
-@media screen and (min-width: 800px) {
-  .container.post .share {
-    margin-left: 10px;
-  }
-}
-.container.post .share a {
-  margin-left: 5px;
-}
-.container.post .control a {
   width: 80px;
   height: 40px;
   line-height: 40px;
+  color: #fff;
+  background: #4ab3a5;
+  text-align: center;
   font-size: 12px;
   font-size: 1.2rem;
+  border-radius: 6px;
+}
+.container .control a:hover {
+  background: #43a194;
 }
 @media screen and (min-width: 540px) {
-  .container.post .control a {
+  .container .control a {
     font-size: 16px;
     font-size: 1.6rem;
     height: 50px;
@@ -978,18 +951,34 @@ header .avatar {
     width: 100px;
   }
 }
-.container.post .control .disabled a {
+.container .control .disabled a {
   background: #8e8e8e;
   cursor: not-allowed;
 }
-.container.post .control .disabled a:hover {
+.container .control .disabled a:hover {
   background: #818181;
 }
-.container.post .control .previous {
+.container .control .previous {
   float: left;
 }
-.container.post .control .next {
+.container .control .next {
   float: right;
+}
+@media screen and (min-width: 540px) {
+  .container .control {
+    margin-top: 30px;
+  }
+}
+.container .share {
+  color: #8e8e8e;
+}
+@media screen and (min-width: 800px) {
+  .container .share {
+    margin-left: 10px;
+  }
+}
+.container .share a {
+  margin-left: 5px;
 }
 /* footer */
 footer {

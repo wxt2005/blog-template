@@ -819,26 +819,51 @@ header {
         }
     }
 
-    /* for load button */
-    .load {
+    /* for control button */
+    .control {
+        &:extend(.clearfix all);
         margin-top: 15px;
         padding: 0;
 
         a {
             display: block;
             margin: 0 auto;
-            width: 140px;
-            height: 50px;
-            line-height: 50px;
+            width: 80px;
+            height: 40px;
+            line-height: 40px;
             color: #fff;
             background: @main-green;
             text-align: center;
-            .font-size(16);
+            .font-size(12);
             border-radius: 6px;
 
             &:hover {
                 background: darken(@main-green, 5%);
             }
+
+            @media @gte540 {
+                .font-size(16);
+                height: 50px;
+                line-height: 50px;
+                width: 100px; 
+            }
+        }
+
+        .disabled a {
+            background: @text-lighter;
+            cursor: not-allowed;
+
+            &:hover {
+                background: darken(@text-lighter, 5%);
+            }
+        }
+
+        .previous {
+            float: left;
+        }
+
+        .next {
+            float: right;
         }
 
         @media @gte540 {
@@ -846,53 +871,16 @@ header {
         }
     }
 
-    /* specific for post */
-    &.post {
-        .share {
-            &:extend(.container article .more all);
-            color: @text-lighter;
-            @media @gte800 {
-                margin-left: 10px;
-            }
-
-            a {
-                margin-left: 5px;
-            }
+    /* for share links */
+    .share {
+        &:extend(.container article .more all);
+        color: @text-lighter;
+        @media @gte800 {
+            margin-left: 10px;
         }
 
-        .control {
-            &:extend(.container .load all);
-            &:extend(.clearfix all);
-
-            a {
-                width: 80px;
-                height: 40px;
-                line-height: 40px;
-                .font-size(12);
-                
-                @media @gte540 {
-                    .font-size(16);
-                    height: 50px;
-                    line-height: 50px;
-                    width: 100px; 
-                }
-            }
-
-            .disabled a {
-                background: @text-lighter;
-                cursor: not-allowed;
-
-                &:hover {
-                    background: darken(@text-lighter, 5%);
-                }
-            }
-
-            .previous {
-                float: left;
-            }
-            .next {
-                float: right;
-            }
+        a {
+            margin-left: 5px;
         }
     }
 }
