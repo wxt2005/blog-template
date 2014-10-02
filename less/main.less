@@ -824,6 +824,7 @@ header {
         &:extend(.clearfix all);
         margin-top: 15px;
         padding: 0;
+        text-align: center;
 
         a {
             display: block;
@@ -864,6 +865,22 @@ header {
 
         .next {
             float: right;
+        }
+
+        .page {
+            display: inline-block;
+            top: 0;
+            height: 40px;
+            line-height: 40px;
+            .font-size(14);
+            color: @main-green;
+            font-weight: bold;
+
+            @media @gte540 {
+                .font-size(18);
+                height: 50px;
+                line-height: 50px;
+            }
         }
 
         @media @gte540 {
