@@ -386,9 +386,12 @@ header .main-nav .drop-menu li {
 }
 @media screen and (min-width: 540px) {
   header .main-nav .drop-menu li {
+    padding-left: 10px;
+    padding-right: 10px;
     width: 50%;
     box-sizing: border-box;
     text-align: center;
+    overflow: hidden;
   }
 }
 header .main-nav .drop-menu li a {
@@ -401,10 +404,10 @@ header .main-nav .drop-menu li a {
     position: absolute;
     background: #fff;
     border-radius: 4px;
-    width: 120px;
+    width: 150px;
     box-shadow: 0 2px 4px 2px rgba(0, 0, 0, 0.2);
     left: 50%;
-    margin-left: -60px;
+    margin-left: -75px;
     top: 45px;
     z-index: 2;
     padding-left: 10px;
