@@ -903,6 +903,62 @@ header {
             margin-left: 5px;
         }
     }
+
+    /* specificy for list layout */
+    &.list {
+        article {
+            background: none;
+            padding-left: 0;
+
+            .content {
+                h1 {
+                    color: @text-lighter;
+                    border-bottom: 1px solid @border-gray;
+                    padding-bottom: 15px;
+                }
+
+                h2 {
+                    @media @gte540 {
+                    }
+                }
+
+                .time-stamp {
+                    @media @gte540 {
+                        .font-size(20);
+                    }
+                }
+
+                ul {
+                    list-style: none;
+
+                    li {
+                        &:extend(.clearfix all);
+
+                        @media @gte540 {
+                            margin-bottom: 20px;
+                        }
+
+                        @media @gte800 {
+                            width: 50%;
+                            float: left;
+                            box-sizing: border-box;
+
+                            &:nth-child(odd) {
+                                padding-right: 1%;
+                                clear: left;
+                            }
+
+                            &:nth-child(even) {
+                                clear: right;
+                                padding-left: 1%;
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+    }
 }
 
 /* footer */

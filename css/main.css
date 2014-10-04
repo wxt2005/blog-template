@@ -132,14 +132,16 @@ table {
 header,
 .container article,
 .container article .info,
-.container .control {
+.container .control,
+.container.list article .content ul li {
   zoom: 1;
 }
 .clearfix:after,
 header:after,
 .container article:after,
 .container article .info:after,
-.container .control:after {
+.container .control:after,
+.container.list article .content ul li:after {
   content: ".";
   height: 0;
   width: 0;
@@ -536,6 +538,7 @@ header .avatar {
   margin-top: 20px;
   /* for control button */
   /* for share links */
+  /* specificy for list layout */
 }
 @media screen and (min-width: 540px) {
   .container {
@@ -1001,6 +1004,44 @@ header .avatar {
 }
 .container .share a {
   margin-left: 5px;
+}
+.container.list article {
+  background: none;
+  padding-left: 0;
+}
+.container.list article .content h1 {
+  color: #8e8e8e;
+  border-bottom: 1px solid #ebebeb;
+  padding-bottom: 15px;
+}
+@media screen and (min-width: 540px) {
+  .container.list article .content .time-stamp {
+    font-size: 20px;
+    font-size: 2rem;
+  }
+}
+.container.list article .content ul {
+  list-style: none;
+}
+@media screen and (min-width: 540px) {
+  .container.list article .content ul li {
+    margin-bottom: 20px;
+  }
+}
+@media screen and (min-width: 800px) {
+  .container.list article .content ul li {
+    width: 50%;
+    float: left;
+    box-sizing: border-box;
+  }
+  .container.list article .content ul li:nth-child(odd) {
+    padding-right: 1%;
+    clear: left;
+  }
+  .container.list article .content ul li:nth-child(even) {
+    clear: right;
+    padding-left: 1%;
+  }
 }
 /* footer */
 footer {
