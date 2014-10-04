@@ -1010,9 +1010,17 @@ header .avatar {
   padding-left: 0;
 }
 .container.list article .content h1 {
-  color: #8e8e8e;
+  color: #b7b7b7;
   border-bottom: 1px solid #ebebeb;
-  padding-bottom: 15px;
+  padding-bottom: 10px;
+  font-size: 24px;
+  font-size: 2.4rem;
+}
+@media screen and (min-width: 540px) {
+  .container.list article .content h1 {
+    font-size: 28px;
+    font-size: 2.8rem;
+  }
 }
 @media screen and (min-width: 540px) {
   .container.list article .content .time-stamp {

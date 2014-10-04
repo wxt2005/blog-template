@@ -912,13 +912,12 @@ header {
 
             .content {
                 h1 {
-                    color: @text-lighter;
+                    color: @text-lightest;
                     border-bottom: 1px solid @border-gray;
-                    padding-bottom: 15px;
-                }
-
-                h2 {
+                    padding-bottom: 10px;
+                    .font-size(24);
                     @media @gte540 {
+                        .font-size(28);
                     }
                 }
 
