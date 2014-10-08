@@ -680,6 +680,7 @@ header .avatar {
   /* heading */
   /* paragraph */
   /* image */
+  /* table */
   /* block quote */
   /* unordered list */
   /* ordered list */
@@ -827,6 +828,26 @@ header .avatar {
   border: 1px solid #b7b7b7;
   padding: 1px;
   box-sizing: border-box;
+}
+.container article .content table {
+  margin-bottom: 15px;
+}
+.container article .content table td,
+.container article .content table th {
+  border: 1px solid #757575;
+  font-size: 14px;
+  font-size: 1.4rem;
+  line-height: 17px;
+  padding: 0.4em 0.2em;
+  color: #757575;
+}
+@media screen and (min-width: 540px) {
+  .container article .content table td,
+  .container article .content table th {
+    font-size: 16px;
+    font-size: 1.6rem;
+    line-height: 22.4px;
+  }
 }
 .container article .content blockquote {
   padding-left: 1em;

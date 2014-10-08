@@ -726,6 +726,17 @@ header {
                 box-sizing: border-box;
             }
 
+            /* table */
+            table {
+                margin-bottom: 15px;
+                td, th {
+                    border: 1px solid darken(@text-lighter, 10%);
+                    .calculatedSize(16;1.4);
+                    padding: 0.4em 0.2em;
+                    color: darken(@text-lighter, 10%);
+                }
+            }
+
             /* block quote */
             blockquote {
                 padding-left: 1em;
