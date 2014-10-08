@@ -475,6 +475,8 @@ header .main-nav .search input:focus::-webkit-input-placeholder {
     display: inline-block;
     margin: 0;
     height: 30px;
+    line-height: 100%;
+    vertical-align: bottom;
     width: 130px;
     -webkit-transition: 0.3s ease;
     transition: 0.3s ease;
@@ -1014,6 +1016,9 @@ header .avatar {
 }
 .container .share a {
   margin-left: 5px;
+}
+.container #disqus_thread {
+  margin-top: 20px;
 }
 .container.list article {
   background: none;
