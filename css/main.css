@@ -892,6 +892,7 @@ header .avatar {
   border: 1px solid #b7b7b7;
   max-height: 30em;
   margin: 0 0 15px 0;
+  overflow: auto;
 }
 .container article .content pre code {
   font-size: 14px;
