@@ -131,7 +131,7 @@ a {
     text-decoration: none;
     color: @text-lighter;
     outline: 0;
-    .transition(color 0.2s ease);
+    .transition(all 0.2s ease);
 
     &:hover {
         color: @main-green;
@@ -254,10 +254,25 @@ header {
                     border-bottom: 1px solid @border-gray;
                     padding-bottom: 10px;
                     padding-top: 10px;
+                    .font-size(20);
 
                     &:first-child {
                         padding-top: 0;
                     }
+                }
+            }
+
+            .tag .drop-menu {
+                width: 200px;
+                margin-left: -100px;
+                text-align: center;
+
+                li {
+                    .font-size(16);
+                    float: none;
+                    width: auto;
+                    display: inline-block;
+                    padding: 0.2em 0.2em;
                 }
             }
         }
@@ -446,7 +461,6 @@ header {
                     margin: 0;
                     height: 30px;
                     line-height: 100%;
-                    vertical-align: bottom;
                     width: 130px;
                     .transition(0.3s ease);
 
@@ -513,6 +527,7 @@ header {
 
 /* conatiner */
 .container {
+    &:extend(.clearfix all);
     margin-top: 20px;
 
     @media @gte540 {
@@ -561,7 +576,7 @@ header {
             position: relative;
 
             @media @gte800 {
-                padding-left: 15px;
+                padding-left: 20px;
             }
 
             div {
@@ -657,13 +672,9 @@ header {
                     line-height: unit(@sizeBase * @lineBase, px);
                 }
             }
-            .bigMargin() {
-                @media @gte800 {
-                    margin-left: 10px;
-                }
-            }
+
             @media @gte800 {
-                margin-left: 10px;
+                margin-left: 20px;
             }
 
             /* heading */
@@ -1008,6 +1019,14 @@ footer {
     color: @text-lightest;
     .font-size(14);
     padding: 20px 10px;
+
+    a {
+        color: @main-green;
+
+        &:hover {
+            color: darken(@main-green, 10%)
+        }
+    }
 
     @media @gte540 {
         .font-size(16);

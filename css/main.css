@@ -133,6 +133,7 @@ code {
 /* overall */
 .clearfix,
 header,
+.container,
 .container article,
 .container article .info,
 .container.list article .content,
@@ -141,6 +142,7 @@ header,
 }
 .clearfix:after,
 header:after,
+.container:after,
 .container article:after,
 .container article .info:after,
 .container.list article .content:after,
@@ -185,8 +187,8 @@ a {
   text-decoration: none;
   color: #8e8e8e;
   outline: 0;
-  -webkit-transition: color 0.2s ease;
-  transition: color 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
 }
 a:hover {
   color: #4ab3a5;
@@ -294,9 +296,24 @@ header .main-nav {
     border-bottom: 1px solid #ebebeb;
     padding-bottom: 10px;
     padding-top: 10px;
+    font-size: 20px;
+    font-size: 2rem;
   }
   header .main-nav .category .drop-menu li:first-child {
     padding-top: 0;
+  }
+  header .main-nav .tag .drop-menu {
+    width: 200px;
+    margin-left: -100px;
+    text-align: center;
+  }
+  header .main-nav .tag .drop-menu li {
+    font-size: 16px;
+    font-size: 1.6rem;
+    float: none;
+    width: auto;
+    display: inline-block;
+    padding: 0.2em 0.2em;
   }
 }
 @media screen and (min-width: 800px) {
@@ -479,7 +496,6 @@ header .main-nav .search input:focus::-webkit-input-placeholder {
     margin: 0;
     height: 30px;
     line-height: 100%;
-    vertical-align: bottom;
     width: 130px;
     -webkit-transition: 0.3s ease;
     transition: 0.3s ease;
@@ -597,7 +613,7 @@ header .avatar {
 }
 @media screen and (min-width: 800px) {
   .container article .info {
-    padding-left: 15px;
+    padding-left: 20px;
   }
 }
 .container article .info div {
@@ -690,7 +706,7 @@ header .avatar {
 }
 @media screen and (min-width: 800px) {
   .container article .content {
-    margin-left: 10px;
+    margin-left: 20px;
   }
 }
 .container article .content h1,
@@ -1115,6 +1131,12 @@ footer {
   font-size: 14px;
   font-size: 1.4rem;
   padding: 20px 10px;
+}
+footer a {
+  color: #4ab3a5;
+}
+footer a:hover {
+  color: #3b8f84;
 }
 @media screen and (min-width: 540px) {
   footer {
