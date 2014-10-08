@@ -132,7 +132,6 @@ table {
 header,
 .container article,
 .container article .info,
-.container .control,
 .container.list article .content,
 .container.list article .content ul li {
   zoom: 1;
@@ -141,7 +140,6 @@ header,
 header:after,
 .container article:after,
 .container article .info:after,
-.container .control:after,
 .container.list article .content:after,
 .container.list article .content ul li:after {
   content: ".";
@@ -936,6 +934,7 @@ header .avatar {
   padding: 0;
   text-align: center;
   position: relative;
+  height: 40px;
 }
 .container .control a {
   display: block;
@@ -1002,6 +1001,7 @@ header .avatar {
 @media screen and (min-width: 540px) {
   .container .control {
     margin-top: 30px;
+    height: 50px;
   }
 }
 .container .share {
