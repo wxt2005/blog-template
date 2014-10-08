@@ -127,7 +127,7 @@ a {
     text-decoration: none;
     color: @text-lighter;
     outline: 0;
-    .transition(0.2s ease);
+    .transition(color 0.2s ease);
 
     &:hover {
         color: @main-green;
@@ -485,7 +485,7 @@ header {
             background: url("@{img}avatar.jpg") no-repeat transparent;
             border: @border solid #fff;
             background-size: @size;
-            .transition(0.3s ease);
+            .transition(top 0.3s ease);
 
             @media (-webkit-device-pixel-ratio: 2) {
                 background-image: url("@{img}avatar@2x.jpg");
@@ -828,6 +828,7 @@ header {
         margin-top: 15px;
         padding: 0;
         text-align: center;
+        position: relative;
 
         a {
             display: block;
@@ -840,6 +841,7 @@ header {
             text-align: center;
             .font-size(12);
             border-radius: 6px;
+            .transition(background 0.3s ease);
 
             &:hover {
                 background: darken(@main-green, 5%);
@@ -863,11 +865,15 @@ header {
         }
 
         .previous {
-            float: left;
+            position: absolute;
+            left: 0;
+            top: 0;
         }
 
         .next {
-            float: right;
+            position: absolute;
+            top: 0;
+            right: 0;
         }
 
         .page {

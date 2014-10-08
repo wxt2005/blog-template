@@ -184,8 +184,8 @@ a {
   text-decoration: none;
   color: #8e8e8e;
   outline: 0;
-  -webkit-transition: 0.2s ease;
-  transition: 0.2s ease;
+  -webkit-transition: color 0.2s ease;
+  transition: color 0.2s ease;
 }
 a:hover {
   color: #4ab3a5;
@@ -516,8 +516,8 @@ header .avatar {
     background: url("../images/avatar.jpg") no-repeat transparent;
     border: 5px solid #ffffff;
     background-size: 120px;
-    -webkit-transition: 0.3s ease;
-    transition: 0.3s ease;
+    -webkit-transition: top 0.3s ease;
+    transition: top 0.3s ease;
   }
 }
 @media screen and (min-width: 540px) and (-webkit-device-pixel-ratio: 2) {
@@ -934,6 +934,7 @@ header .avatar {
   margin-top: 15px;
   padding: 0;
   text-align: center;
+  position: relative;
 }
 .container .control a {
   display: block;
@@ -947,6 +948,8 @@ header .avatar {
   font-size: 12px;
   font-size: 1.2rem;
   border-radius: 6px;
+  -webkit-transition: background 0.3s ease;
+  transition: background 0.3s ease;
 }
 .container .control a:hover {
   background: #43a194;
@@ -968,10 +971,14 @@ header .avatar {
   background: #818181;
 }
 .container .control .previous {
-  float: left;
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 .container .control .next {
-  float: right;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 .container .control .page {
   display: inline-block;
