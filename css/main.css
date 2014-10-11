@@ -906,6 +906,10 @@ header .avatar {
 .container article .content ol li p {
   margin-left: 0;
 }
+.container article .content ul li img,
+.container article .content ol li img {
+  display: block;
+}
 .container article .content ol {
   list-style-type: decimal;
 }
