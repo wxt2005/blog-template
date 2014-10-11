@@ -847,6 +847,12 @@ header {
             float: left;
             margin: 10px 0;
             .font-size(12); 
+            a {
+                color: @main-green;
+                &:hover {
+                   color: darken(@main-green, 10%);
+                }
+            }
 
             @media @gte540 {
                 .font-size(16); 
@@ -855,10 +861,10 @@ header {
                 a {
                     border-bottom: 1px solid @border-gray;
                     padding-bottom: 3px;
-                    color: @main-green;
 
                     &:hover {
                        border-color: @main-green; 
+                       color: @main-green;
                     }
                 }
             }

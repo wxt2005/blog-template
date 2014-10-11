@@ -976,6 +976,14 @@ header .avatar {
   font-size: 12px;
   font-size: 1.2rem;
 }
+.container article .more a,
+.container .share a {
+  color: #4ab3a5;
+}
+.container article .more a:hover,
+.container .share a:hover {
+  color: #3b8f84;
+}
 @media screen and (min-width: 540px) {
   .container article .more,
   .container .share {
@@ -987,11 +995,11 @@ header .avatar {
   .container .share a {
     border-bottom: 1px solid #ebebeb;
     padding-bottom: 3px;
-    color: #4ab3a5;
   }
   .container article .more a:hover,
   .container .share a:hover {
     border-color: #4ab3a5;
+    color: #4ab3a5;
   }
 }
 .container .control {
