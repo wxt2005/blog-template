@@ -697,6 +697,7 @@ header .avatar {
 }
 .container article .content {
   /* mixins */
+  margin-bottom: 20px;
   /* heading */
   /* paragraph */
   /* image */
@@ -707,6 +708,11 @@ header .avatar {
   /* horizontal line */
   /* inline elements */
   /* code block */
+}
+@media screen and (min-width: 540px) {
+  .container article .content {
+    margin-bottom: 40px;
+  }
 }
 @media screen and (min-width: 800px) {
   .container article .content {
